@@ -2,36 +2,71 @@ body{
   margin: 0;
   font-family: "Secular One";
   font-size: 16px;
+  color: #fff;
 }
 
 .home{
-  height: 100vh;
-  background: silver;
-  background-image: url('../img/home_bg.jpg');
+  background: #000;
   background-size: 100% 100%;
-  &__nav{
-    height: 94px;
+  &__video{
+    height: 115vh;
+    width: 100%;
+  }
+  &__overlay{
+    position: absolute;
     display: flex;
-    align-items: center;
-    &-logo{
-      display: inline-block;
-      height: 75px;
-      width: 66px;
-      background: url("../img/logo.svg")
-    }
-    &-menu{
-      display: inline-block;
-      &_li{
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0; left: 0;
+    padding-left: 4%;
+    padding-bottom: 5vh;
+    height: 110.8vh;
+    width: 96%;
+    background: rgba(0,0,0,.6);
+    &-nav{
+      height: 94px;
+      display: flex;
+      align-items: center;
+      &_logo{
         display: inline-block;
-        &-anchor{
-          text-decoration: none;
-          color: #fff;
+        height: 75px;
+        width: 66px;
+        background: url("../img/logo.svg")
+      }
+      &-menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 7%;
+        padding: 0;
+        min-width: 26%;
+        &_li{
+          display: inline-block;
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
     }
   }
 }
-// .about-us{
-//   height: 753px;
-//   background: #134086;
-// }
+
+.about-us{
+  height: 75vh;
+  background: #134086 url("../img/about_bg.png") 90% 100% no-repeat;
+  background-size: 30% 80%;
+  text-align: center;
+  &__text{
+    display: inline-block;
+    margin-top: 8%;
+    width: 60%;
+    &_header{
+      font-size: 3rem;
+      margin-bottom: 6%;
+    }
+    &_p{
+      font-size: 1.3rem;
+    }
+  }
+}
