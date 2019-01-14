@@ -1,3 +1,37 @@
 body{
-  background: red;
+  margin: 0;
+  font-family: "Secular One";
+  font-size: 16px;
 }
+
+.home{
+  height: 100vh;
+  background: silver;
+  background-image: url('../../images/home_bg.jpg');
+  background-size: 100% 100%;
+  &__nav{
+    height: 94px;
+    display: flex;
+    align-items: center;
+    &-logo{
+      display: inline-block;
+      height: 75px;
+      width: 66px;
+      background: url("../../images/logo.svg")
+    }
+    &-menu{
+      display: inline-block;
+      &_li{
+        display: inline-block;
+        &-anchor{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// .about-us{
+//   height: 753px;
+//   background: #134086;
+// }
