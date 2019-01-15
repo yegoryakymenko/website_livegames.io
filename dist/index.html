@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style/css/index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
@@ -40,15 +42,26 @@
 
   <div class="our-games">
     <h1 class="our-games__header">OUR GAMES</h1>
-    <div class="our-games__games">
-      <ul class="our-games__games-container">
-        <li class="our-games__games-container_game"></li>
-        <li class="our-games__games-container_game"></li>
-        <li class="our-games__games-container_game"></li>
-        <li class="our-games__games-container_game"></li>
-      </ul>
+    <div class="our-games__container">
+      <div class="our-games__container-wrapper">
+        <span class="our-games__container_button" onclick="shiftLeft()">
+          <i class="fas fa-caret-left"></i>
+        </span>
+          <ul class="our-games__container-wrapper_list">
+              <li class="box" id="game-1"></li>
+              <li class="box" id="game-2"></li>
+              <li class="box" id="game-3"></li>
+              <li class="box" id="game-4"></li>
+              <li class="box" id="game-5"></li>
+          </ul>
+          <span class="our-games__container_button" onclick="shiftRight()">
+            <i class="fas fa-caret-right"></i>
+          </span>
+      </div>
     </div>
   </div>
+
+
 
   <div class="over-under">
     <video class="over-under__video" autoplay="autoplay" loop="loop">
@@ -74,5 +87,7 @@
   <div class="partners"></div>
   <div class="career"></div>
   <div class="footer"></div>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

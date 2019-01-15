@@ -6,7 +6,7 @@ const
   cleanCSS 			      = require('gulp-clean-css'),
   autoprefixer 	  	  = require('gulp-autoprefixer');
 
-const htmlMain = gulp.task('html', () =>
+gulp.task('html', () =>
   gulp.src("src/*.html")
     .pipe(nunjucksRender())
     .pipe(gulp.dest("./dist/"))
@@ -23,7 +23,13 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist/css/'));
 });
 
+gulp.task('js', function () {
+  return gulp.src('src/js/*.js')
+    .pipe(gulp.dest('./dist/js/'));
+});
+
 gulp.task('default',['html','sass'], function () {
+    gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./src/**/*.scss', ['sass']);
     gulp.watch("./src/**/*.html", ['html']);
 });
