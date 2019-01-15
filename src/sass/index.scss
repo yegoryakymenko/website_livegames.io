@@ -9,7 +9,9 @@ body{
 }
 
 .home{
-  background: #000;
+  height: 100vh;
+  background: #000;;
+  background-image: url('../img/home_bg.jpg');
   background-size: 100% 100%;
   &__video{
     height: 115vh;
@@ -352,5 +354,118 @@ body{
         }
       }
     }
+  }
+}
+// .about-us{
+//   height: 753px;
+//   background: #134086;
+// }
+
+.partners {
+  height: 60vh;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  &__h3 {
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    margin-top: 0;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    max-width: 100%;
+    &-block {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      width: 33.3%;
+      img {
+          max-width: 12vw;
+          height: auto;
+          width: auto;
+      }
+    }
+  }
+
+}
+
+.career {
+  height: 100vh;
+  width: 100%;
+  background: #134086;
+  color: #fff;
+  &-h3 {
+    font-size: 2.5vw;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3rem;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  &__content {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    &-block {
+      width: 50%;
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto
+      }
+      p {
+        font-family: 'Heebo', sans-serif;
+        font-size: 1.5vw;
+        vertical-align: middle;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 5rem;
+        padding: 15px 5rem;
+        background: #68A621;
+        color: #fff;
+        font-size: 1.5vw;
+        text-transform: uppercase;
+        border: none;
+        font-weight: bold;
+      }
+    }
+    &-block:nth-child(2) {
+      padding: 5rem 2rem 0 2rem;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+  background: #05142A;
+  &__logo {
+    width: 20%;
+  }
+  &__social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+    margin-top: 2rem;
+    .icon {
+      width: 20%;
+      height: 25%;
+    }
+  }
+  &__copyrigth {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    color: #fff;
   }
 }
