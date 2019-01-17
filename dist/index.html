@@ -14,6 +14,7 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
 </head>
 
 <body>
@@ -47,23 +48,20 @@
 
   <div class="our-games">
     <h1 class="our-games__header">OUR GAMES</h1>
-    <div class="our-games__container">
-      <div class="our-games__container-wrapper">
-        <span class="our-games__container_button" onclick="shiftLeft()">
-          <i class="fas fa-caret-left"></i>
-        </span>
-          <ul class="our-games__container-wrapper_list">
-              <li class="box" id="game-1"></li>
-              <li class="box" id="game-2"></li>
-              <li class="box" id="game-3"></li>
-              <li class="box" id="game-4"></li>
-              <li class="box" id="game-5"></li>
-          </ul>
-          <span class="our-games__container_button" onclick="shiftRight()">
-            <i class="fas fa-caret-right"></i>
-          </span>
-      </div>
+    <div class="swiper-container our-games__container">
+    <div class="swiper-wrapper our-games__container-wrapper">
+      <a href="" class="swiper-slide" id="game-1"></a>
+      <a href="" class="swiper-slide" id="game-2"></a>
+      <a href="" class="swiper-slide" id="game-3"></a>
+      <a href="" class="swiper-slide" id="game-4"></a>
+      <a href="" class="swiper-slide" id="game-5"></a>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
   </div>
 
 
@@ -86,16 +84,9 @@
       </div>
     </div>
   </div>
-
   <div class="tombala"></div>
-  <div class="partners-benefits"></div>
-<<<<<<< HEAD
-  <div class="partners"></div>
-  <div class="career"></div>
-  <div class="footer"></div>
 
-  <script type="text/javascript" src="js/script.js"></script>
-=======
+  <div class="partners-benefits"></div>
   <div class="partners">
     <h3 class="partners__h3">our partners</h3>
     <div class="partners__container">
@@ -154,7 +145,23 @@
       <i class="far fa-copyright"></i> 2019 All rigths reserved
     </p>
   </div>
->>>>>>> origin/Footer
+
+  <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+  <script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  </script>
 </body>
 
 </html>

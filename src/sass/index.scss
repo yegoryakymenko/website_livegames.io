@@ -84,231 +84,39 @@ body{
     font-size: 3rem;
     text-align: center;
   }
-  .our-games__container {
+  &__container {
       display: flex;
       justify-content: space-around;
       align-items: center;
       background: #000 url("../img/games_bg.jpg");
       z-index: -5;
-      &_button {
-          float: left;
-          font-size: 4rem;
-          cursor: pointer;
+      height: 50vh;
+      .swiper-slide{
+        display: inline-block;
+        background: red;
       }
-      &-wrapper {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-around;
-          width: 100%;
-          &_list {
-              width: 90%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 25rem;
-              .box {
-                margin: 0;
-                width: 50%;
-                height: 20rem;
-                box-shadow: 0px 0px 2rem 0px #888888;
-                background-color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-              }
-              .box:nth-child(2n) {
-                transform: scale(0.85);
-                z-index: 1;
-              }
-              .box:nth-child(4n + 1) {
-                transform: scale(0.75);
-                z-index: 0;
-              }
-              .box:nth-child(1) {
-                left: 15%;
-              }
-              .box:nth-child(2) {
-                left: 5%;
-              }
-              .box:nth-child(3) {
-                z-index: 2;
-              }
-              .box:nth-child(4) {
-                left: -5%;
-              }
-              .box:nth-child(5) {
-                left: -15%;
-              }
-              .box--hide {
-                  display: none;
-              }
-              @for $i from 1 through $games{
-                #game-#{$i}{
-                  background: url("../img/game-"+$i+".jpg");
-                  background-size: 100% 100%;
-                }
-              }
-          }
+      @for $i from 1 through $games{
+        #game-#{$i}{
+          background: purple url("../img/game-"+$i+".jpg");
+          background-size: 100% 100%;
+        }
       }
+
+      // &-wrapper {
+      //   .our-games_game{
+      //     display: inline-block;
+      //     height: 50vh;
+      //     width: 30%;
+      //     background: red;
+      //   }
+      //   @for $i from 1 trough $games{
+      //     .our-games_game:nth-child(#{$i}){
+      //       background: purple url("../img/game-"+$i+".jpg");
+      //     }
+      //   }
+      // }
   }
 }
-.move-out-from-left {
-    animation: moveOutLeft 0.5s ease-in-out;
-}
-
-.move-out-from-right {
-    animation: moveOutRight 0.5s ease-in-out;
-}
-
-.move-to-position5-from-left {
-    animation: moveToP5Left 0.5s ease-in-out;
-}
-
-.move-to-position4-from-left {
-    animation: moveToP4Left 0.5s ease-in-out;
-}
-
-.move-to-position3-from-left {
-    animation: moveToP3Left 0.5s ease-in-out;
-}
-
-.move-to-position2-from-left {
-    animation: moveToP2Left 0.5s ease-in-out;
-}
-
-
-.move-to-position1-from-left{
-    animation: moveToP1Left 0.5s ease-in-out;
-}
-
-.move-to-position5-from-right{
-    animation: moveToP5Right 0.5s ease-in-out;
-}
-.move-to-position4-from-right{
-    animation: moveToP4Right 0.5s ease-in-out;
-}
-.move-to-position3-from-right{
-    animation: moveToP3Right 0.5s ease-in-out;
-}
-.move-to-position2-from-right{
-    animation: moveToP2Right 0.5s ease-in-out;
-}
-.move-to-position1-from-right{
-    animation: moveToP1Right 0.5s ease-in-out;
-}
-
-@keyframes moveOutLeft {
-    0% {
-        transform: scale(0.75) translateX(0%);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.5) translateX(-150%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(0.25) translateX(0%);
-        opacity: 0;
-    }
-}
-
-@keyframes moveOutRight {
-    0% {
-        transform: scale(0.75) translateX(0%);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.5) translateX(150%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(0.25) translateX(0%);
-        opacity: 0;
-    }
-}
-@keyframes moveToP5Left {
-    from {
-        transform: scale(0.75) translateX(100%);
-    }
-    to {
-        transform: scale(0.75) translateX(0);
-    }
-}
-@keyframes moveToP4Left {
-    from {
-        transform: scale(0.75) translateX(100%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-@keyframes moveToP3Left {
-    from {
-        transform: scale(0.85) translateX(100%);
-    }
-    to {
-        transform: scale(1) translateX(0);
-    }
-}
-@keyframes moveToP2Left {
-    from {
-        transform: scale(1) translateX(100%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-@keyframes moveToP1Left {
-    from {
-        transform: scale(0.85) translateX(100%);
-    }
-    to {
-        transform: scale(0.75) translateX(0);
-    }
-}
-@keyframes moveToP1Right {
-    from {
-        transform: scale(0.75) translateX(-100%);
-    }
-    to {
-        transform: scale(0.75) translateX(0);
-    }
-}
-@keyframes moveToP2Right {
-    from {
-        transform: scale(0.75) translateX(-100%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-@keyframes moveToP3Right {
-    from {
-        transform: scale(0.85) translateX(-100%);
-    }
-    to {
-        transform: scale(1) translateX(0);
-    }
-}
-@keyframes moveToP4Right {
-    from {
-        transform: scale(1) translateX(-100%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-@keyframes moveToP5Right {
-    from {
-        transform: scale(0.85) translateX(-100%);
-    }
-    to {
-        transform: scale(0.75) translateX(0);
-    }
-}
-
 .over-under{
   position: relative;
   &__video{
@@ -356,10 +164,6 @@ body{
     }
   }
 }
-// .about-us{
-//   height: 753px;
-//   background: #134086;
-// }
 
 .partners {
   height: 60vh;
