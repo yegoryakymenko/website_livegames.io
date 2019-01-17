@@ -207,16 +207,49 @@ body{
       }
     }
   }
+  .swiper-pagination-bullet{
+    width: 15px !important;
+    border-radius: 5px !important;
+    background: #fff !important;
+  }
+  .swiper-pagination-bullet-active{
+    width: 35px !important;
+    opacity: 0.8 !important;
+  }
 }
-.swiper-pagination-bullet{
-  width: 15px !important;
-  border-radius: 5px !important;
-  background: #fff !important;
+
+.partners-benefits{
+  background: $liveGames-blue;
+  height: 185vh;
+  &__header{
+    margin: 0;
+    line-height: 15vh;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__container{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: pink;
+    @for $i from 1 through 6{
+      .partners-benefits_benefit:nth-child(#{$i}){
+        display: inline-block;
+        background: red;
+        width: 30%;
+        .partners-benefits_benefit-img{
+          height: 20vh;
+          width: 100%;
+          background: red url("../img/benefit-"+$i+".png");
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
 }
-.swiper-pagination-bullet-active{
-  width: 35px !important;
-  opacity: 0.8 !important;
-}
+
 .partners {
   height: 60vh;
   text-align: center;
