@@ -78,9 +78,12 @@ body{
 }
 
 .our-games{
+  height: 100vh;
+  background: #000 url("../img/games_bg.jpg") bottom no-repeat;
+  background-size: 100% 87vh;
   &__header{
-    margin: 0;
-    padding: 7vh 0;
+    margin: 0 0 20vh;
+    line-height: 13vh;
     background: #000;
     font-size: 3rem;
     text-align: center;
@@ -89,7 +92,6 @@ body{
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background: #000 url("../img/games_bg.jpg");
       z-index: -5;
       height: 50vh;
       .swiper-slide{
@@ -229,6 +231,7 @@ body{
   }
   &__container{
     margin: 0 auto;
+    padding: 0;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -237,8 +240,8 @@ body{
     @for $i from 1 through 6{
       .partners-benefits_benefit:nth-child(#{$i}){
         display: inline-block;
-        background: red;
-        width: 30%;
+        margin-bottom: 50px;
+        width: 330px;
         .partners-benefits_benefit-img{
           height: 20vh;
           width: 100%;
