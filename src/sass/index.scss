@@ -1,6 +1,7 @@
 $games: 5;
 $overUnder-learnMore-bg: #CBB03F;
 $overUnder-playNow-bg: #68A621;
+$liveGames-blue: #134086;
 body{
   margin: 0;
   font-family: "Secular One";
@@ -59,7 +60,7 @@ body{
 
 .about-us{
   height: 75vh;
-  background: #134086 url("../img/about_bg.png") 90% 100% no-repeat;
+  background: $liveGames-blue url("../img/about_bg.png") 90% 100% no-repeat;
   background-size: 30% 80%;
   text-align: center;
   &__text{
@@ -117,17 +118,20 @@ body{
       // }
   }
 }
+
 .over-under{
   position: relative;
+  background: black;
   &__video{
-    margin: 0;
+    display: block;
+    margin: 0 auto;
     padding: 0;
-    width: 100%;
+    height: 100vh;
     z-index: 1;
   }
   &__overlay{
     position: absolute;
-    height: 113vh;
+    height: 100vh;
     width: 100%;
     top: 0;
     background: rgba(11,33,61, 0.5);
@@ -165,6 +169,54 @@ body{
   }
 }
 
+.tombala{
+  height: 100vh;
+  background: blue url("../img/tombala_bg.jpg");
+  background-size: 100% 100%;
+  &__header{
+    margin: 0;
+    padding: 5vh 0;
+    text-align: center;
+  }
+  &__container{
+    height: 70vh;
+    width: 70%;
+    background: $liveGames-blue;
+    &-wrapper{
+      .tombala__slide{
+        display: flex;
+        justify-content: space-around;
+        .tombala__slide_video{
+          margin: 7vh 0;
+          width: 49%;
+          height: auto;
+        }
+        .tombala__slide-info{
+          margin: 7vh 0;
+          width: 47%;
+          .tombala__slide-info_play{
+            display: inline-block;
+            line-height: 7vh;
+            width: 40%;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            background: $overUnder-playNow-bg;
+          }
+        }
+      }
+    }
+  }
+}
+.swiper-pagination-bullet{
+  width: 15px !important;
+  border-radius: 5px !important;
+  background: #fff !important;
+}
+.swiper-pagination-bullet-active{
+  width: 35px !important;
+  opacity: 0.8 !important;
+}
 .partners {
   height: 60vh;
   text-align: center;

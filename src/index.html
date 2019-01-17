@@ -48,23 +48,21 @@
 
   <div class="our-games">
     <h1 class="our-games__header">OUR GAMES</h1>
-    <div class="swiper-container our-games__container">
-    <div class="swiper-wrapper our-games__container-wrapper">
-      <a href="" class="swiper-slide" id="game-1"></a>
-      <a href="" class="swiper-slide" id="game-2"></a>
-      <a href="" class="swiper-slide" id="game-3"></a>
-      <a href="" class="swiper-slide" id="game-4"></a>
-      <a href="" class="swiper-slide" id="game-5"></a>
+      <div class="swiper-container our-games__container">
+      <div class="swiper-wrapper our-games__container-wrapper">
+        <a href="" class="swiper-slide" id="game-1"></a>
+        <a href="" class="swiper-slide" id="game-2"></a>
+        <a href="" class="swiper-slide" id="game-3"></a>
+        <a href="" class="swiper-slide" id="game-4"></a>
+        <a href="" class="swiper-slide" id="game-5"></a>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
-  </div>
-
-
 
   <div class="over-under">
     <video class="over-under__video" autoplay="autoplay" loop="loop">
@@ -84,7 +82,64 @@
       </div>
     </div>
   </div>
-  <div class="tombala"></div>
+
+  <div class="tombala">
+    <h1 class="tombala__header">TOMBALA</h1>
+    <div class="tombala__container swiper-container">
+    <div class="tombala__container-wrapper swiper-wrapper">
+      <div class="tombala__slide swiper-slide">
+        <video class="tombala__slide_video" loop="loop" controls="controls">
+          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        </video>
+        <div class="tombala__slide-info">
+          <h4 class="tombala__slide-info_header">BET ON CARDS</h4>
+          <p class="tombala__slide-info_p">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+            <a href="" class="tombala__slide-info_play">PLAY NOW</a>
+        </div>
+      </div>
+      <div class="tombala__slide swiper-slide">
+        <video class="tombala__slide_video" loop="loop" controls="controls">
+          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        </video>
+        <div class="tombala__slide-info">
+          <h4 class="tombala__slide-info_header">BET ON COLORS</h4>
+          <p class="tombala__slide-info_p">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+            <a href="" class="tombala__slide-info_play">PLAY NOW</a>
+        </div>
+      </div>
+      <div class="tombala__slide swiper-slide">
+        <video class="tombala__slide_video" loop="loop" controls="controls">
+          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        </video>
+        <div class="tombala__slide-info">
+          <h4 class="tombala__slide-info_header">BET ON REWARDS</h4>
+          <p class="tombala__slide-info_p">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.</p>
+            <a href="" class="tombala__slide-info_play">PLAY NOW</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
 
   <div class="partners-benefits"></div>
   <div class="partners">
@@ -148,7 +203,7 @@
 
   <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
   <script>
-  var swiper = new Swiper('.swiper-container', {
+  var swiperGames = new Swiper('.our-games__container', {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
@@ -159,6 +214,15 @@
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+  });
+  var swiperTombala = new Swiper('.tombala__container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
   });
   </script>
