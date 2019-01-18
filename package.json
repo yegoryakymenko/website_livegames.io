@@ -13,6 +13,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-cli": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-debug": "^4.0.0",
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-sass": "^4.0.1",

@@ -27,8 +27,13 @@ gulp.task('js', function () {
   return gulp.src('src/js/*.js')
     .pipe(gulp.dest('./dist/js/'));
 });
+gulp.task('imagemin', () =>
+    gulp.src('dist/img/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+);
 
-gulp.task('default',['html','sass'], function () {
+gulp.task('default',['html','sass', 'imagemin'], function () {
     gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./src/**/*.scss', ['sass']);
     gulp.watch("./src/**/*.html", ['html']);
