@@ -3,6 +3,10 @@ var swiperGames = new Swiper('.our-games__container', {
   slidesPerView: 3,
   spaceBetween: 70,
   loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -29,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
-        if (video.isIntersecting) {
+        if (video.isIntersecting && video.target) {
           for (var source in video.target.children) {
             var videoSource = video.target.children[source];
             if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
@@ -37,8 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
           }
 
-          video.target.load();
-          video.target.classList.remove("lazy");
+          // if(video.target !== undefined){
+            video.target.load();
+            video.target.classList.remove("lazy");
+          // }
           lazyVideoObserver.unobserve(video.target);
         }
       });
@@ -56,10 +62,12 @@ document.addEventListener("scroll", function() {
   if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
-        if (video.isIntersecting) {
+        if (video.isIntersecting && video.target) {
           video.target.play();
         }else{
-          video.target.pause();
+          // if(video.target !== undefined){
+            video.target.pause()
+          // }
         }
       });
     });
