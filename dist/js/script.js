@@ -23,34 +23,24 @@ var swiperTombala = new Swiper('.tombala__container', {
 });
 //OPTIMIZE VIDEO
 
-document.addEventListener("DOMContentLoaded", lazyVideoLoad);
-document.addEventListener("scroll", lazyVideoLoad);
-
-function lazyVideoLoad() {
+document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
   if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
-        console.log("video.isIntersecting",video.isIntersecting);
-        console.log(video.target);
         if (video.isIntersecting) {
-          video.target.play(); 
-        }else{
-          video.target.pause();
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
         }
-        // if (video.isIntersecting) {
-        //   for (var source in video.target.children) {
-        //     var videoSource = video.target.children[source];
-        //     if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-        //       videoSource.src = videoSource.dataset.src;
-        //     }
-        //   }
-        //
-        //   video.target.load();
-        //   video.target.classList.remove("lazy");
-        //   lazyVideoObserver.unobserve(video.target);
-        // }
       });
     });
 
@@ -58,7 +48,27 @@ function lazyVideoLoad() {
       lazyVideoObserver.observe(lazyVideo);
     });
   }
-}
+});
+
+document.addEventListener("scroll", function() {
+  var pageVideos = [].slice.call(document.querySelectorAll("video"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          video.target.play();
+        }else{
+          video.target.pause();
+        }
+      });
+    });
+
+    pageVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
 // SMOOTH ANCHOR TRANSITION?
 // document.querySelector('.about-us').scrollIntoView({
 //   behavior: 'smooth'
