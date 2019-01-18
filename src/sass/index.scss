@@ -4,10 +4,21 @@ $overUnder-playNow-bg: #68A621;
 $liveGames-blue: #134086;
 body{
   margin: 0;
-  font-family: "Secular One";
+  font-family: "Josefin Sans";
   font-size: 16px;
   color: #fff;
 }
+.paragraph{
+  font-family: "Open Sans";
+}
+
+ .main-block-header{
+   margin: 0;
+   font-size: 2rem;
+   line-height: 13vh;
+   text-align: center;
+   text-transform: uppercase;
+ }
 
 .home{
   background: #000;;
@@ -67,10 +78,6 @@ body{
     display: inline-block;
     margin-top: 8%;
     width: 60%;
-    &_header{
-      font-size: 3rem;
-      margin-bottom: 6%;
-    }
     &_p{
       font-size: 1.3rem;
     }
@@ -83,10 +90,7 @@ body{
   background-size: 100% 87vh;
   &__header{
     margin: 0 0 20vh;
-    line-height: 13vh;
     background: #000;
-    font-size: 3rem;
-    text-align: center;
   }
   &__container {
       display: flex;
@@ -142,12 +146,6 @@ body{
     &-text{
       display: inline-block;
       margin-top: 18%;
-      &_header{
-
-      }
-      &_p{
-
-      }
       &-buttons{
         display: flex;
         flex-wrap: wrap;
@@ -175,11 +173,6 @@ body{
   height: 100vh;
   background: blue url("../img/tombala_bg.jpg");
   background-size: 100% 100%;
-  &__header{
-    margin: 0;
-    padding: 5vh 0;
-    text-align: center;
-  }
   &__container{
     height: 70vh;
     width: 70%;
@@ -222,12 +215,8 @@ body{
 
 .partners-benefits{
   background: $liveGames-blue;
-  // height: 185vh;
   &__header{
-    margin: 0;
     line-height: 20vh;
-    text-align: center;
-    text-transform: uppercase;
   }
   &__container{
     margin: 0 auto;
@@ -241,11 +230,11 @@ body{
       width: 50%;
       &-img{
         display: inline-block;
-        width: 70%;
+        width: 60%;
         height: 20vh;
       }
       &-header{
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
       }
       &-info{
