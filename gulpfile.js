@@ -34,15 +34,13 @@ gulp.task('imagemin', () =>
         .pipe(gulp.dest('dist/img'))
 );
 
-<<<<<<< HEAD
-=======
 gulp.task('imagemin', () =>
     gulp.src('dist/img/**')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
 );
 
->>>>>>> origin/Script_and_mobile
+
 gulp.task('default',['html','sass', 'imagemin'], function () {
     gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./src/**/*.scss', ['sass']);
