@@ -27,7 +27,7 @@ body{
   &__video{
     margin: auto;
     display: block;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
   }
   &__overlay{
@@ -123,7 +123,7 @@ body{
     margin: 0 auto;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
     z-index: 1;
   }
   &__overlay{
@@ -175,7 +175,6 @@ body{
         .tombala__slide_video{
           margin: 7vh 0;
           width: 49%;
-          height: auto;
         }
         .tombala__slide-info{
           margin: 7vh 0;
@@ -234,13 +233,28 @@ body{
         font-size: 0.7rem;
       }
     }
-    @for $i from 1 through 6{
+  }
+  #benefit_group-1{
+    @for $i from 1 through 3{
       .partners-benefits_benefit:nth-child(#{$i}){
         display: inline-block;
         margin-bottom: 50px;
         width: 50%;
         .partners-benefits_benefit-img{
           background: url("../img/benefit-"+$i+".png") no-repeat;
+          background-size: 90% 100%;
+        }
+      }
+    }
+  }
+  #benefit_group-2{
+    @for $i from 1 through 3{
+      .partners-benefits_benefit:nth-child(#{$i}){
+        display: inline-block;
+        margin-bottom: 50px;
+        width: 50%;
+        .partners-benefits_benefit-img{
+          background: url("../img/benefit-"+($i+3)+".png") no-repeat;
           background-size: 90% 100%;
         }
       }
