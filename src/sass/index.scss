@@ -10,8 +10,7 @@ body{
 }
 
 .home{
-  background: #000;;
-  background-image: url('../img/home_bg.jpg');
+  background: #000;
   background-size: 100% 100%;
   &__video{
     margin: auto;
@@ -222,7 +221,6 @@ body{
 
 .partners-benefits{
   background: $liveGames-blue;
-  // height: 185vh;
   &__header{
     margin: 0;
     line-height: 20vh;
@@ -238,7 +236,7 @@ body{
     flex-wrap: wrap;
     .partners-benefits_benefit{
       text-align: center;
-      width: 50%;
+      width: 30%;
       &-img{
         display: inline-block;
         width: 70%;
@@ -258,10 +256,10 @@ body{
       .partners-benefits_benefit:nth-child(#{$i}){
         display: inline-block;
         margin-bottom: 50px;
-        width: 330px;
+        width: 50%;
         .partners-benefits_benefit-img{
-          background: url("../img/benefit-"+$i+".png");
-          background-size: 100% 100%;
+          background: url("../img/benefit-"+$i+".png") no-repeat;
+          background-size: 90% 100%;
         }
       }
     }
@@ -277,6 +275,7 @@ body{
     text-transform: uppercase;
     font-size: 2.5vw;
     margin-top: 0;
+    color: #000;
   }
   &__container {
     display: flex;

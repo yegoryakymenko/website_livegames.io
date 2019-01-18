@@ -5,6 +5,7 @@ const
   watch 			        = require('gulp-watch'),
   cleanCSS 			      = require('gulp-clean-css'),
   autoprefixer 	  	  = require('gulp-autoprefixer');
+  imagemin            = require('gulp-imagemin');
 
 gulp.task('html', () =>
   gulp.src("src/*.html")
@@ -28,7 +29,13 @@ gulp.task('js', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-gulp.task('default',['html','sass'], function () {
+gulp.task('imagemin', () =>
+    gulp.src('dist/img/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+);
+
+gulp.task('default',['html','sass', 'imagemin'], function () {
     gulp.watch('./src/**/*.js', ['js']);
     gulp.watch('./src/**/*.scss', ['sass']);
     gulp.watch("./src/**/*.html", ['html']);
