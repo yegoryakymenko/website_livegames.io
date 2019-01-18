@@ -41,7 +41,7 @@ body{
     padding-bottom: 5vh;
     height: 95vh;
     width: 96%;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.0);
     &-nav{
       height: 94px;
       display: flex;
@@ -87,27 +87,33 @@ body{
 }
 
 .our-games{
+  height: 70vh;
+
   &__header{
     background: black;
   }
-  &__container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      z-index: -5;
-      height: 40vh;
-      background: url("../img/games_bg.jpg") no-repeat;
-      background-size: 100% 40vh;
-      .swiper-slide{
-        display: inline-block;
-      }
-      @for $i from 1 through $games{
-        #game-#{$i}{
-          background: url("../img/game-"+$i+".jpg");
-          background-size: 100% 100%;
+  &__info{
+    padding: 10vh 0;
+    background: url("../img/games_bg.jpg") bottom no-repeat;
+    background-size: 100% 60vh;
+    .our-games__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 40vh;
+        background: none;
+        .swiper-slide{
+          display: inline-block;
         }
-      }
+        @for $i from 1 through $games{
+          #game-#{$i}{
+            background: url("../img/game-"+$i+".jpg");
+            background-size: 100% 100%;
+          }
+        }
+    }
   }
+
 }
 
 .over-under{
@@ -206,16 +212,16 @@ body{
   &__container{
     margin: 0 auto;
     padding: 0;
-    width: 80%;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     .partners-benefits_benefit{
       text-align: center;
-      width: 30%;
+      width: 20px;
+      margin: 10px;
       &-img{
         display: inline-block;
-        width: 60%;
+        width: 180px;
         height: 20vh;
       }
       &-header{
