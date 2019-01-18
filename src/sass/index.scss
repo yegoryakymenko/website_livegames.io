@@ -22,6 +22,11 @@ body{
 }
 
 .home{
+<<<<<<< HEAD
+=======
+  background: #000;
+  background-size: 100% 100%;
+>>>>>>> origin/Script_and_mobile
   &__video{
     margin: auto;
     display: block;
@@ -210,7 +215,7 @@ body{
     flex-wrap: wrap;
     .partners-benefits_benefit{
       text-align: center;
-      width: 50%;
+      width: 30%;
       &-img{
         display: inline-block;
         width: 60%;
@@ -230,10 +235,10 @@ body{
       .partners-benefits_benefit:nth-child(#{$i}){
         display: inline-block;
         margin-bottom: 50px;
-        width: 330px;
+        width: 50%;
         .partners-benefits_benefit-img{
-          background: url("../img/benefit-"+$i+".png");
-          background-size: 100% 100%;
+          background: url("../img/benefit-"+$i+".png") no-repeat;
+          background-size: 90% 100%;
         }
       }
     }
@@ -250,6 +255,7 @@ body{
     text-transform: uppercase;
     font-size: 2.5vw;
     margin-top: 0;
+    color: #000;
   }
   &__container {
     display: flex;
