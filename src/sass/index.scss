@@ -10,12 +10,12 @@ body{
 }
 
 .home{
-  height: 100vh;
   background: #000;;
   background-image: url('../img/home_bg.jpg');
   background-size: 100% 100%;
   &__video{
-    height: 115vh;
+    margin: auto;
+    height: 100vh;
     width: 100%;
   }
   &__overlay{
@@ -26,7 +26,7 @@ body{
     top: 0; left: 0;
     padding-left: 4%;
     padding-bottom: 5vh;
-    height: 110.8vh;
+    height: 95vh;
     width: 96%;
     background: rgba(0,0,0,.6);
     &-nav{
@@ -222,30 +222,45 @@ body{
 
 .partners-benefits{
   background: $liveGames-blue;
-  height: 185vh;
+  // height: 185vh;
   &__header{
     margin: 0;
-    line-height: 15vh;
+    line-height: 20vh;
     text-align: center;
     text-transform: uppercase;
   }
   &__container{
     margin: 0 auto;
     padding: 0;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: pink;
+    .partners-benefits_benefit{
+      text-align: center;
+      width: 50%;
+      &-img{
+        display: inline-block;
+        width: 70%;
+        height: 20vh;
+      }
+      &-header{
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+      &-info{
+        margin: auto;
+        width: 60%;
+        font-size: 0.7rem;
+      }
+    }
     @for $i from 1 through 6{
       .partners-benefits_benefit:nth-child(#{$i}){
         display: inline-block;
         margin-bottom: 50px;
         width: 330px;
         .partners-benefits_benefit-img{
-          height: 20vh;
-          width: 100%;
-          background: red url("../img/benefit-"+$i+".png");
+          background: url("../img/benefit-"+$i+".png");
           background-size: 100% 100%;
         }
       }
