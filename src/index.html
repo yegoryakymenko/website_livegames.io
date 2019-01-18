@@ -14,14 +14,14 @@
 
 <body>
   <div class="home">
-    <video class="home__video" autoplay="autoplay" loop="loop">
-      <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+    <video playsinline autoplay="autoplay" playsinline class="home__video video" loop="loop">
+      <source src="img/ou.mp4"  type='video/mp4'/>
     </video>
     <div class="home__overlay">
       <nav class="home__overlay-nav">
         <div class="home__overlay-nav_logo"></div>
         <ul class="home__overlay-nav-menu">
-          <li class="home__overlay-nav-menu_li"><a href="">ABOUT US</a></li>
+          <li class="home__overlay-nav-menu_li"><a href="#">ABOUT US</a></li>
           <li class="home__overlay-nav-menu_li"><a href="">GAMES</a></li>
           <li class="home__overlay-nav-menu_li"><a href="">CONTACTS</a></li>
         </ul>
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="about-us">
+  <div class="about-us" id="about-us">
     <div class="about-us__text">
       <h1 class="about-us__text_header main-block-header">ABOUT US</h1>
       <p class="about-us__text_p paragraph">LivesGames Ltd. has been making a huge difference in the iGaming industry since 2015. In a short time, the number of active players has reached over 100.000 monthly. We continue to provide a variety of games with a player-focused design, easy to use mobile interface, high resolution Live Casino broadcasts.</p>
@@ -60,8 +60,8 @@
   </div>
 
   <div class="over-under">
-    <video class="over-under__video" autoplay="autoplay" loop="loop">
-      <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+    <video playsinline class="over-under__video video lazy" loop="loop">
+      <source src="img/ou.mp4"  type='video/mp4'/>
     </video>
     <div class="over-under__overlay">
       <div class="over-under__overlay-text">
@@ -83,8 +83,8 @@
     <div class="tombala__container swiper-container">
     <div class="tombala__container-wrapper swiper-wrapper">
       <div class="tombala__slide swiper-slide">
-        <video class="tombala__slide_video" loop="loop" controls="controls">
-          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        <video playsinline class="tombala__slide_video video lazy" controls="controls">
+          <source src="img/ou.mp4"  type='video/mp4'/>
         </video>
         <div class="tombala__slide-info">
           <h4 class="tombala__slide-info_header">BET ON CARDS</h4>
@@ -99,8 +99,8 @@
         </div>
       </div>
       <div class="tombala__slide swiper-slide">
-        <video class="tombala__slide_video" loop="loop" controls="controls">
-          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        <video playsinline class="tombala__slide_video video lazy" controls="controls">
+          <source src="img/ou.mp4"  type='video/mp4'/>
         </video>
         <div class="tombala__slide-info">
           <h4 class="tombala__slide-info_header">BET ON COLORS</h4>
@@ -115,8 +115,8 @@
         </div>
       </div>
       <div class="tombala__slide swiper-slide">
-        <video class="tombala__slide_video" loop="loop" controls="controls">
-          <source src="img/Over-Under-video.mp4"  type='video/mp4'/>
+        <video playsinline class="tombala__slide_video video lazy" controls="controls">
+          <source src="img/ou.mp4"  type='video/mp4'/>
         </video>
         <div class="tombala__slide-info">
           <h4 class="tombala__slide-info_header">BET ON REWARDS</h4>
