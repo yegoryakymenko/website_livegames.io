@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
             video.target.load();
             video.target.classList.remove("lazy");
 
-          lazyVideoObserver.unobserve(video.target);
         }
       });
     });
@@ -61,7 +60,7 @@ document.addEventListener("scroll", function() {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
         if (video.isIntersecting) {
-          video.target.play();
+          video.readyState === 4 && video.target.play();
         }else{
           // if(video.target !== undefined){
             video.target.pause()
