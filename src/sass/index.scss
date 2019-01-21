@@ -5,7 +5,7 @@ $liveGames-blue: #134086;
 
 
 body{
-    width: 100vw;
+  width: 100vw;
   margin: 0;
   font-family: "Josefin Sans";
   font-size: 16px;
@@ -26,6 +26,7 @@ body{
 
 .home{
   width: 100%;
+  overflow-x: hidden;
   &__video{
     margin: auto;
     display: block;
@@ -98,7 +99,8 @@ body{
 }
 
 .our-games{
-  height: 70vh;
+  min-height: 1%;
+  overflow-y: auto;
   position: relative;
   &__header{
     background: black;
@@ -150,14 +152,15 @@ body{
 
 .over-under{
   position: relative;
-  height:100vh;
+  height: 100vh;
   width: 100%;
+  overflow-x: hidden;
   &__video{
     display: block;
     margin: 0 auto;
     z-index: 1;
     height: 100%;
-    width: 100%;
+    width: auto;
   }
   &__overlay{
     position: absolute;
@@ -396,7 +399,7 @@ body{
     .icon {
       width: 20%;
       height: 25%;
-     
+
     }
   }
   &__copyrigth {
@@ -405,9 +408,5 @@ body{
     color: #fff;
   }
 }
-<<<<<<< HEAD
-@import "mobil.scss";
+
 @import "mobile.scss";
-=======
-@import "mobile.scss";
->>>>>>> origin/footer-mobile
