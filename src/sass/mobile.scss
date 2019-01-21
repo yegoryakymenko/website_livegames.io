@@ -1,0 +1,88 @@
+$games: 4;
+$overUnder-learnMore-bg: #CBB03F;
+$overUnder-playNow-bg: #68A621;
+$liveGames-blue: #134086;
+
+@media all and (max-width: 625px){
+  .paragraph{
+    font-family: "Open Sans";
+  }
+  .main-block-header{
+     font-size: 1.3rem;
+  }
+
+  .tombala{
+    height: 100vh;
+    .mobile_invisible-info{
+      display: none;
+    }
+    &__container{
+      height: 60vh;
+      width: 90%;
+      padding: 10px 0;
+      &-wrapper{
+        .tombala__slide{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .tombala__slide_video{
+            width: 90%;
+          }
+          .tombala__slide-info{
+            width: 90%;
+            text-align: center;
+            &_header{
+              margin: 0;
+              font-size: 1rem;
+            }
+            &_p{
+              margin: 10px auto;
+              width: 80%;
+              font-size: 0.8rem;
+            }
+            &_play{
+              display: inline-block;
+              line-height: 3vh;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      .swiper-pagination{
+        top: 45%;
+      }
+    }
+  }
+
+  .partners-benefits{
+    #benefit_group-1{
+      float: left;
+    }
+    #benefit_group-2{
+      margin-top: 150px;
+      float: right;
+    }
+    &__container{
+      margin: auto;
+      width: 49%;
+      flex-wrap: wrap;
+      .partners-benefits_benefit{
+        width: 100%;
+        margin-bottom: 100px;
+        &-img{
+          width: 100%;
+        }
+        &-header{
+          font-size: 1rem;
+          width: 100%;
+        }
+        &-info{
+          width: 100%;
+        }
+      }
+      .partners-benefits_benefit:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

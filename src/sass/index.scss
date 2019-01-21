@@ -139,7 +139,7 @@ body{
         }
     }
     .swiper-pagination{
-      top: 320px;
+      top: 95%;
       z-index: 10;
     }
   }
@@ -223,17 +223,19 @@ body{
     }
   }
   .swiper-pagination-bullet{
-    width: 15px !important;
-    border-radius: 5px !important;
-    background: #fff !important;
+    width: 15px;
+    border-radius: 5px;
+    background: #fff;
   }
   .swiper-pagination-bullet-active{
-    width: 35px !important;
-    opacity: 0.8 !important;
+    width: 35px;
+    opacity: 0.8;
   }
 }
 
 .partners-benefits{
+  min-height: 1%;
+  overflow: auto;
   background: $liveGames-blue;
   &__header{
     line-height: 20vh;
@@ -245,9 +247,10 @@ body{
     display: flex;
     justify-content: space-between;
     .partners-benefits_benefit{
+      display: inline-block;
       text-align: center;
-      width: 20px;
-      margin: 10px;
+      margin-bottom: 50px;
+      width: 50%;
       &-img{
         display: inline-block;
         width: 180px;
@@ -267,11 +270,8 @@ body{
   #benefit_group-1{
     @for $i from 1 through 3{
       .partners-benefits_benefit:nth-child(#{$i}){
-        display: inline-block;
-        margin-bottom: 50px;
-        width: 50%;
         .partners-benefits_benefit-img{
-          background: url("../img/benefit-"+$i+".png") no-repeat;
+          background: url("../img/benefit-"+$i+".svg") no-repeat;
           background-size: 90% 100%;
         }
       }
@@ -280,11 +280,8 @@ body{
   #benefit_group-2{
     @for $i from 1 through 3{
       .partners-benefits_benefit:nth-child(#{$i}){
-        display: inline-block;
-        margin-bottom: 50px;
-        width: 50%;
         .partners-benefits_benefit-img{
-          background: url("../img/benefit-"+($i+3)+".png") no-repeat;
+          background: url("../img/benefit-"+($i+3)+".svg") no-repeat;
           background-size: 90% 100%;
         }
       }
@@ -402,3 +399,5 @@ body{
     color: #fff;
   }
 }
+
+@import "mobile.scss"
