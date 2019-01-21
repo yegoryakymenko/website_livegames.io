@@ -3,7 +3,9 @@ $overUnder-learnMore-bg: #CBB03F;
 $overUnder-playNow-bg: #68A621;
 $liveGames-blue: #134086;
 
+
 body{
+    width: 100vw;
   margin: 0;
   font-family: "Josefin Sans";
   font-size: 16px;
@@ -17,7 +19,7 @@ body{
 .main-block-header{
    margin: 0;
    font-size: 2rem;
-   line-height: 13vh;
+   line-height: 13vw;
    text-align: center;
    text-transform: uppercase;
 }
@@ -315,7 +317,7 @@ body{
       justify-content: center;
       width: 33.3%;
       img {
-          max-width: 12vw;
+          max-width: 16vw;
           height: auto;
           width: auto;
       }
@@ -336,7 +338,7 @@ body{
     text-align: center;
     padding-top: 3rem;
     letter-spacing: 3px;
-    font-weight: normal;
+    font-weight: bold;
   }
   &__content {
     position: relative;
@@ -394,6 +396,7 @@ body{
     .icon {
       width: 20%;
       height: 25%;
+     
     }
   }
   &__copyrigth {
@@ -402,5 +405,9 @@ body{
     color: #fff;
   }
 }
+<<<<<<< HEAD
 @import "mobil.scss";
 @import "mobile.scss";
+=======
+@import "mobile.scss";
+>>>>>>> origin/footer-mobile
