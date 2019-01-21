@@ -5,12 +5,16 @@ $liveGames-blue: #134086;
 $liveGames-night: #010C23;
 
 @media all and (max-width: 625px){
+  body{
+    background: $liveGames-night;
+  }
   .paragraph{
     font-family: "Open Sans";
     font-size: 0.8rem;
   }
   .main-block-header{
-     font-size: 1.3rem;
+    line-height: 5vh;
+    font-size: 1.3rem;
   }
 
   .home{
@@ -44,17 +48,13 @@ $liveGames-night: #010C23;
 
   .about-us{
     position: relative;
-    height: 60vh;
+    height: 50vh;
     background: $liveGames-night;
     text-align: center;
     &_background{
-      position: absolute;
       top: 50%; left: 50%;
-      height: 40%;
-      width: 43%;
-      background: url("../img/about_bg.svg") no-repeat;
-      background-size: 100% 100%;
-      opacity: 0.2;
+      height: 20vh;
+      width: 23vh;
     }
     &__text{
       display: inline-block;
@@ -67,10 +67,81 @@ $liveGames-night: #010C23;
     }
   }
 
+  .our-games{
+    height: 53vh;
+    position: relative;
+    &__header{
+      background: $liveGames-night;
+    }
+    &__info{
+      padding: 10vh 0;
+      background-image: none;
+      .our-games__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 35vh;
+        background: none;
+        padding-bottom: 50px;
+        .swiper-slide{
+          display: inline-block;
+          text-decoration: none;
+          .game_text{
+            display: inline-block;
+            margin: 10% 0 0 8%;
+            text-align: right;
+            width: 30%;
+          }
+        }
+      }
+    }
+    .swiper-pagination{
+      top: 36vh;
+    }
+  }
+
+  .over-under{
+    height: 60vh;
+    &__video{
+      visibility: hidden;
+    }
+    &__overlay{
+      position: absolute;
+      text-align: center;
+      &-text{
+        display: inline-block;
+        &_header{
+          font-size: 1rem;
+          margin-bottom: 10vh;
+        }
+        &_p{
+          margin: auto;
+          width: 80%;
+          font-size: 0.6rem;
+        }
+        &-buttons{
+          margin-top: 10vh;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          &_learn, &_play{
+            padding: 15px 0;
+            width: 49%;
+            color: #fff;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
   .tombala{
     height: 100vh;
     .mobile_invisible-info{
       display: none;
+    }
+    &__header{
+      line-height: 15vh;
     }
     &__container{
       height: 60vh;
