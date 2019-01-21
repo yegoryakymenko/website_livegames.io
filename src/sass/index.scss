@@ -1,4 +1,4 @@
-$games: 5;
+$games: 4;
 $overUnder-learnMore-bg: #CBB03F;
 $overUnder-playNow-bg: #68A621;
 $liveGames-blue: #134086;
@@ -9,6 +9,7 @@ body{
   font-size: 16px;
   color: #fff;
   background: #000;
+  overflow-x: hidden;
 }
 .paragraph{
   font-family: "Open Sans";
@@ -22,13 +23,12 @@ body{
 }
 
 .home{
-  background: #000;
-  background-size: 100% 100%;
+  width: 100%;
   &__video{
     margin: auto;
     display: block;
-    width: 99vw;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
   }
   &__overlay{
     width: 100%;
@@ -72,10 +72,19 @@ body{
 }
 
 .about-us{
+  position: relative;
   height: 50vh;
-  background: $liveGames-blue url("../img/about_bg.png") 90% 100% no-repeat;
-  background-size: 300px 300px;
+  background: $liveGames-blue;
   text-align: center;
+  &_background{
+    position: absolute;
+    top: 8%; left: 40%;
+    height: 350px;
+    width: 80%;
+    background: url("../img/about_bg.svg") no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+  }
   &__text{
     display: inline-block;
     margin-top: 3%;
@@ -88,22 +97,39 @@ body{
 
 .our-games{
   height: 70vh;
-
+  position: relative;
   &__header{
     background: black;
   }
   &__info{
     padding: 10vh 0;
-    background: url("../img/games_bg.jpg") bottom no-repeat;
-    background-size: 100% 60vh;
+    background: url("../img/games_bg.jpg") no-repeat;
+    background-size: 100% 100%;
     .our-games__container {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 40vh;
         background: none;
+        padding-bottom: 50px;
         .swiper-slide{
           display: inline-block;
+          text-decoration: none;
+          .game_text{
+            display: inline-block;
+            margin: 10% 0 0 8%;
+            text-align: right;
+            width: 30%;
+            .game_header{
+              color: gold;
+              margin: 0;
+            }
+            .game_p{
+              margin: 0;
+              color: #4ad6db;
+              font-weight: bold;
+            }
+          }
         }
         @for $i from 1 through $games{
           #game-#{$i}{
@@ -111,6 +137,10 @@ body{
             background-size: 100% 100%;
           }
         }
+    }
+    .swiper-pagination{
+      top: 320px;
+      z-index: 10;
     }
   }
 
@@ -121,10 +151,9 @@ body{
   &__video{
     display: block;
     margin: 0 auto;
-    padding: 0;
-    height: 100vh;
-    width: 99vw;
     z-index: 1;
+    height: 100%;
+    width: 100%;
   }
   &__overlay{
     position: absolute;
