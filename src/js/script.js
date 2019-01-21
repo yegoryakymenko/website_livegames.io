@@ -1,6 +1,8 @@
 //ADD COROUSEL
-var swiperGames = new Swiper('.our-games__container', {
-  slidesPerView: 3,
+let deviceWidth = window.innerWidth;
+
+let swiperGames = new Swiper('.our-games__container', {
+  slidesPerView: (deviceWidth > 560) ? 3 : 1,
   spaceBetween: 70,
   loop: true,
   autoplay: {
@@ -16,7 +18,7 @@ var swiperGames = new Swiper('.our-games__container', {
     prevEl: '.swiper-button-prev',
   },
 });
-var swiperTombala = new Swiper('.tombala__container', {
+let swiperTombala = new Swiper('.tombala__container', {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -25,8 +27,36 @@ var swiperTombala = new Swiper('.tombala__container', {
     clickable: true,
   },
 });
-//OPTIMIZE VIDEO
 
+window.addEventListener("resize", function() {
+  deviceWidth = window.innerWidth;
+
+  swiperGames = new Swiper('.our-games__container', {
+    slidesPerView: (deviceWidth > 560) ? 3 : 1,
+    spaceBetween: 70,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  if(deviceWidth <= 560){
+    var pageVideos = [].slice.call(document.querySelectorAll("video"));
+    pageVideos.forEach(function(video) {
+      video.pause();
+    });
+  }
+});
+//OPTIMIZE VIDEO
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
@@ -55,11 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("scroll", function() {
   var pageVideos = [].slice.call(document.querySelectorAll("video"));
-
-  if ("IntersectionObserver" in window) {
+  console.log(deviceWidth);
+  if ("IntersectionObserver" in window && (deviceWidth > 560)) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
-        if (video.isIntersecting) {
+        if (video.isIntersecting && (deviceWidth > 560)) {
           video.readyState === 4 && video.target.play();
         }else{
           // if(video.target !== undefined){
@@ -74,6 +104,9 @@ document.addEventListener("scroll", function() {
     });
   }
 });
+//turn off video for mobile
+
+
 // SMOOTH ANCHOR TRANSITION?
 // document.querySelector('.about-us').scrollIntoView({
 //   behavior: 'smooth'

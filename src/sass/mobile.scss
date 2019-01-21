@@ -2,13 +2,69 @@ $games: 4;
 $overUnder-learnMore-bg: #CBB03F;
 $overUnder-playNow-bg: #68A621;
 $liveGames-blue: #134086;
+$liveGames-night: #010C23;
 
 @media all and (max-width: 625px){
   .paragraph{
     font-family: "Open Sans";
+    font-size: 0.8rem;
   }
   .main-block-header{
      font-size: 1.3rem;
+  }
+
+  .home{
+    height: 40vh;
+    width: 100%;
+    &__overlay{
+      height: 40vh;
+      &-nav{
+        height: 45px;
+        margin: 0;
+        &_logo{
+          height: 30px;
+          width: 25px;
+          background-size: 100% 100%;
+        }
+        &-menu{
+          display: none;
+        }
+      }
+      &-text{
+        margin-bottom: 20px;
+        &_header{
+          font-size: 1rem;
+        }
+        &_p{
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .about-us{
+    position: relative;
+    height: 60vh;
+    background: $liveGames-night;
+    text-align: center;
+    &_background{
+      position: absolute;
+      top: 50%; left: 50%;
+      height: 40%;
+      width: 43%;
+      background: url("../img/about_bg.svg") no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.2;
+    }
+    &__text{
+      display: inline-block;
+      margin-top: 3%;
+      width: 70%;
+      font-size: 1rem;
+      &_p{
+        font-size: 0.8rem;
+      }
+    }
   }
 
   .tombala{
