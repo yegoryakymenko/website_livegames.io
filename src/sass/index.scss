@@ -78,9 +78,9 @@ body{
   text-align: center;
   &_background{
     position: absolute;
-    top: 8%; left: 40%;
+    top: 8%; left: 67%;
     height: 350px;
-    width: 80%;
+    width: 23%;
     background: url("../img/about_bg.svg") no-repeat;
     background-size: 100% 100%;
     opacity: 0.2;
@@ -109,7 +109,7 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 40vh;
+        height: 35vh;
         background: none;
         padding-bottom: 50px;
         .swiper-slide{
@@ -157,7 +157,7 @@ body{
   }
   &__overlay{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     background: rgba(11,33,61, 0.5);
@@ -201,6 +201,7 @@ body{
       .tombala__slide{
         display: flex;
         justify-content: space-around;
+        align-items: center;
         .tombala__slide_video{
           margin: 7vh 0;
           width: 49%;
