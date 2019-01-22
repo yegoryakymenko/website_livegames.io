@@ -29,8 +29,7 @@ $liveGames-night: #010C23;
   }
 
   .home{
-    height: 55vh;
-    background: $liveGames-night;
+    height: 90vh;
     &__overlay{
       &-nav{
         &-menu{
@@ -191,25 +190,17 @@ $liveGames-night: #010C23;
     .paragraph{
       font-family: "Open Sans";
       font-size: 0.8rem;
+      margin: 0;
     }
     .main-block-header{
-      line-height: 5vh;
       font-size: 2rem;
     }
 
     .home{
       height: 65vh;
-      width: 100%;
-      overflow: hidden;
-      background: $liveGames-night;
       &__overlay{
         margin: 0;
-        height: 40vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         &-nav{
-          margin: 0;
           height: 50px;
           &_logo{
             height: 30px;
@@ -224,42 +215,31 @@ $liveGames-night: #010C23;
           &_header{
             font-size: 1rem;
           }
-          &_p{
-            margin: 0;
-          }
         }
       }
     }
 
     .about-us{
-      position: relative;
-      height: 50vh;
-      background: $liveGames-blue;
-      text-align: center;
+      height: 300px;
       &_background{
-        top: 50%; left: 60%;
+        top: 70%; left: 60%;
         height: 20vh;
         width: 17vh;
       }
       &__text{
-        display: inline-block;
         margin-top: 13%;
         width: 70%;
-        font-size: 1rem;
-        &_p{
-          font-size: 0.8rem;
-        }
       }
     }
 
     .our-games{
-      height: 55vh;
+      height: 58vh;
       overflow-y: visible;
       position: relative;
       background: $liveGames-darkBlue;
       &__header{
         background: none;
-        line-height: 10vh;
+        line-height: 15vh;
       }
       &__info{
         padding: 1vh 0 10vh;
@@ -333,7 +313,7 @@ $liveGames-night: #010C23;
     }
 
     .tombala{
-      height: 600px;
+      height: 700px;
       .mobile_invisible-info{
         display: none;
       }
@@ -341,12 +321,12 @@ $liveGames-night: #010C23;
         line-height: 15vh;
       }
       &__container{
-        height: 450px;
+        height: 500px;
         width: 90%;
         padding: 10px 0;
         &-wrapper{
           .tombala__slide{
-            height: 450px;
+            height: 500px;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -467,29 +447,26 @@ $liveGames-night: #010C23;
   }
 
   .home{
-    height: 40vh;
-    width: 100%;
+    height: 250px;
     background: url("../img/videos/home_bg.jpg") center no-repeat;
-    background-size: auto 100%;
-    overflow: hidden;
+    background-size: 100% 100%;
     &__video{
       display: none;
     }
     &__overlay{
-      height: 40vh;
-      width: 90%;
       &-nav{
-        height: 45px;
-        margin: 0;
         &_logo{
           height: 30px;
           width: 27px;
           background-size: 100% 100%;
         }
         &-menu{
-
-          width: 90%;
-          font-size: 0.8rem;
+          width: 80%;
+          &_li{
+            a{
+              font-size: 1rem;
+            }
+          }
         }
       }
       &-text{
@@ -505,19 +482,18 @@ $liveGames-night: #010C23;
   }
 
   .about-us{
-    position: relative;
-    height: 50vh;
-    background: $liveGames-blue;
-    text-align: center;
-    width: 100%;
+    height: 250px;
     &_background{
-      top: 50%; left: 60%;
+      top: 35%; left: 60%;
       height: 20vh;
       width: 17vh;
     }
     &__text{
-      margin-top: 8vh;
+      margin: 0;
       width: 70%;
+      &_p{
+        font-size: 0.7rem;
+      }
     }
   }
 
@@ -595,7 +571,7 @@ $liveGames-night: #010C23;
   }
 
   .tombala{
-    height: 100vh;
+    height: 600px;
     .mobile_invisible-info{
       display: none;
     }
@@ -603,11 +579,12 @@ $liveGames-night: #010C23;
       line-height: 15vh;
     }
     &__container{
-      height: 60vh;
+      height:400px;
       width: 90%;
       padding: 10px 0;
       &-wrapper{
         .tombala__slide{
+          height: 400px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
