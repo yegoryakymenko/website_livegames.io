@@ -6,7 +6,7 @@ $liveGames-darkBlue: #072D66;
 $liveGames-night: #010C23;
 
 //SMALL DESKTOPS
-@media only screen and (min-width: 770px) and (max-width: 1199px) {
+@media only screen and (min-width: 770px) and (max-width: 1200px) {
   body{
     width: 100vw;
     margin: 0;
@@ -27,7 +27,6 @@ $liveGames-night: #010C23;
      text-align: center;
      text-transform: uppercase;
   }
-
   .home{
     height: 90vh;
     &__overlay{
@@ -44,16 +43,6 @@ $liveGames-night: #010C23;
       }
     }
   }
-}
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .career {
-    height: 60vh;
-    &-h3 {
-      padding-top: 3rem;
-    }
-  }
-}
-
   .about-us{
     &_background{
       position: absolute;
@@ -113,6 +102,12 @@ $liveGames-night: #010C23;
       top: 450px;
     }
   }
+  .career {
+    height: 60vh;
+    &-h3 {
+      padding-top: 3rem;
+    }
+  }
   .mobile-landscape {
     height: 100vh;
     &__content {
@@ -124,7 +119,6 @@ $liveGames-night: #010C23;
         line-height: 1.5rem;
       }
     }
-
   }
 }
 //TABLETS
@@ -165,7 +159,7 @@ $liveGames-night: #010C23;
     }
 
     .about-us{
-      height: 300px;
+      height: 400px;
       &_background{
         top: 70%; left: 60%;
         height: 20vh;
@@ -538,9 +532,9 @@ $liveGames-night: #010C23;
           }
         }
       }
-      .swiper-pagination{
-        top: 45%;
-      }
+    }
+    .swiper-pagination{
+      top: 45%;
     }
   }
 
@@ -578,6 +572,7 @@ $liveGames-night: #010C23;
       }
     }
   }
+
   .partners {
     padding-bottom: 0;
     padding-right: 1rem;
