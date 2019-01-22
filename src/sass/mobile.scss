@@ -44,6 +44,15 @@ $liveGames-night: #010C23;
       }
     }
   }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .career {
+    height: 60vh;
+    &-h3 {
+      padding-top: 3rem;
+    }
+  }
+}
 
   .about-us{
     &_background{
@@ -103,6 +112,19 @@ $liveGames-night: #010C23;
     .swiper-pagination{
       top: 450px;
     }
+  }
+  .mobile-landscape {
+    height: 100vh;
+    &__content {
+      padding-top: 1.5rem;
+      .button {
+        padding-top: 0;
+      }
+      .paragraph {
+        line-height: 1.5rem;
+      }
+    }
+
   }
 }
 //TABLETS
@@ -294,6 +316,55 @@ $liveGames-night: #010C23;
         }
       }
     }
+  .career {
+    height: 50vh;
+    &__content {
+      padding-top: 3rem;
+      font-size: 2vw;
+      &-block {
+        p {
+          font-size: 2vw;
+          margin:0;
+          line-height: 1.5rem;
+        }
+        button {
+          margin-top: 1.5rem;
+        }
+      }
+      &-block:nth-child(2) {
+        padding-top: 1rem;
+      }
+    }
+  }
+  .footer {
+    height: 50vh;
+    &__logo {
+      width: 35%;
+    }
+    &__social-icons {
+      width: 25%;
+      .icon {
+        width: 20%;
+        height: 25%;
+        .social-icon {
+          max-width: 45px;
+        }
+      }
+    }
+  }
+  .mobile-landscape {
+    height: 100vh;
+    &__content {
+      padding-top: 1.5rem;
+      .career__content-block:nth-child(2) {
+        padding-top: .5rem;
+      }
+      .paragraph {
+        line-height: 1.5rem;
+      }
+    }
+
+  }
 }
 //MOBILES
 @media only screen and (max-width: 480px) {
@@ -504,6 +575,76 @@ $liveGames-night: #010C23;
       }
       .partners-benefits_benefit:last-child{
         margin-bottom: 0;
+      }
+    }
+  }
+  .partners {
+    padding-bottom: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    &__h3 {
+      font-size: 1.3rem;
+      padding-top: 2.5rem;
+    }
+    &__container {
+      padding-top: 0;
+      &-block {
+        img {
+          max-width: 25vw;
+        }
+      }
+    }
+  }
+  .career {
+    height: 55vh;
+    &-h3 {
+      font-size: 1.3rem;
+      padding-top: 2.5rem;
+    }
+    &__content {
+      padding-top: 1rem;
+      &-block {
+        width: 100%;
+        p {
+          font-size: 4vw;
+          width: 80%;
+          margin: 0 auto;
+          padding: 0rem 1rem 0 1rem;
+          line-height: 1.5rem;
+        }
+        button {
+          font-size: 3vw;
+          width:80%;
+          margin: 0 auto;
+          margin-top: 1rem;
+          padding: 15px 3rem;
+        }
+      }
+      &-block:nth-child(1) {
+        display: none;
+      }
+      &-block:nth-child(2) {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  .footer {
+    height: 45vh;
+    &__copyrigth {
+      font-size: .9rem;
+    }
+    &__logo {
+      width: 45%;
+    }
+    &__social-icons {
+      width: 40%;
+      .icon {
+        width: 20%;
+        height: 25%;
+        .social-icon {
+          max-width: 40px;
+        }
       }
     }
   }
