@@ -2,7 +2,7 @@ $games: 4;
 $overUnder-learnMore-bg: #CBB03F;
 $overUnder-playNow-bg: #68A621;
 $liveGames-blue: #134086;
-
+$liveGames-night: #010C23;
 
 body{
   width: 100vw;
@@ -15,35 +15,37 @@ body{
 }
 .paragraph{
   font-family: "Open Sans";
+  font-size: 1rem;
 }
 .main-block-header{
    margin: 0;
-   font-size: 2rem;
-   line-height: 13vw;
+   font-size: 3rem;
+   line-height: 7vw;
    text-align: center;
    text-transform: uppercase;
 }
 
 .home{
+  position: relative;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background: $liveGames-night;
   &__video{
     margin: auto;
     display: block;
     height: 100%;
-    width: 100%;
+    width: 100vw;
   }
   &__overlay{
-    width: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     top: 0; left: 0;
     padding-left: 4%;
-    padding-bottom: 5vh;
-    height: 95vh;
-    width: 96%;
+    height: 100%;
+    width: 100%;
     background: none;
     &-nav{
       height: 94px;
@@ -67,8 +69,16 @@ body{
           a{
             text-decoration: none;
             color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
           }
         }
+      }
+    }
+    &-text{
+      margin-bottom: 10vh;
+      &_p{
+        font-size: 1.3rem;
       }
     }
   }
@@ -76,14 +86,14 @@ body{
 
 .about-us{
   position: relative;
-  height: 50vh;
+  height: 400px;
   background: $liveGames-blue;
   text-align: center;
   &_background{
     position: absolute;
-    top: 8%; left: 67%;
+    top: 12vh; left: 67%;
     height: 350px;
-    width: 23%;
+    width: 320px;
     background: url("../img/about_bg.svg") no-repeat;
     background-size: 100% 100%;
     opacity: 0.2;
@@ -93,7 +103,7 @@ body{
     margin-top: 3%;
     width: 60%;
     &_p{
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -154,19 +164,19 @@ body{
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   &__video{
     display: block;
-    margin: 0 auto;
-    z-index: 1;
+    margin: auto;
     height: 100%;
-    width: auto;
+    width: 100%;
+    z-index: 1;
   }
   &__overlay{
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 0;
+    top: 0; left: 0;
     background: rgba(11,33,61, 0.5);
     z-index: 10;
     text-align: center;
@@ -183,7 +193,7 @@ body{
           color: #fff;
           font-weight: bold;
           font-size: 1rem;
-          border: none;
+          text-decoration: none;
         }
         &_learn{
           background: $overUnder-learnMore-bg;
@@ -206,6 +216,7 @@ body{
     background: $liveGames-blue;
     &-wrapper{
       .tombala__slide{
+        height: 70vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -217,6 +228,7 @@ body{
         .tombala__slide-info{
           margin: 7vh 0;
           width: 47%;
+          font-size: 1rem;
           .tombala__slide-info_play{
             display: inline-block;
             line-height: 7vh;
@@ -229,6 +241,9 @@ body{
         }
       }
     }
+  }
+  .swiper-pagination{
+    top: 63vh;
   }
   .swiper-pagination-bullet{
     width: 15px;
@@ -261,7 +276,7 @@ body{
       width: 50%;
       &-img{
         display: inline-block;
-        width: 20vh;
+        width: 22vh;
         height: 20vh;
       }
       &-header{
@@ -281,6 +296,11 @@ body{
         .partners-benefits_benefit-img{
           background: url("../img/benefit-"+$i+".svg") no-repeat;
           background-size: 90% 100%;
+        }
+        @if $i == 3{
+          .partners-benefits_benefit-img{
+            background-size: 100% 100%;
+          }
         }
       }
     }
