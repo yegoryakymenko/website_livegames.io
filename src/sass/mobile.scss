@@ -28,7 +28,7 @@ $liveGames-night: #010C23;
      text-transform: uppercase;
   }
   .home{
-    height: 90vh;
+    height: 85vh;
     &__overlay{
       &-nav{
         &-menu{
@@ -63,6 +63,40 @@ $liveGames-night: #010C23;
     }
   }
 
+  .our-games{
+    height: 430px;
+    overflow-y: visible;
+    position: relative;
+    background: $liveGames-darkBlue;
+    &__header{
+      background: none;
+      line-height: 15vh;
+    }
+    &__info{
+      padding: 1vh 0 10vh;
+      background-image: none;
+      .our-games__container {
+        height: 230px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .swiper-slide{
+          height: 250px;
+          display: inline-block;
+          text-decoration: none;
+          .game_text{
+            display: inline-block;
+            margin: 10% 0 0 8%;
+            text-align: right;
+            width: 30%;
+          }
+        }
+      }
+    }
+    .swiper-pagination{
+      top: 260px;
+    }
+  }
   .over-under{
     height: 500px;
     &__overlay{
@@ -172,7 +206,7 @@ $liveGames-night: #010C23;
     }
 
     .our-games{
-      height: 58vh;
+      height: 430px;
       overflow-y: visible;
       position: relative;
       background: $liveGames-darkBlue;
@@ -184,13 +218,9 @@ $liveGames-night: #010C23;
         padding: 1vh 0 10vh;
         background-image: none;
         .our-games__container {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          height: 35vh;
-          background: none;
-          padding-bottom: 50px;
+          height: 250px;
           .swiper-slide{
+            height: 250px;
             display: inline-block;
             text-decoration: none;
             .game_text{
@@ -203,7 +233,7 @@ $liveGames-night: #010C23;
         }
       }
       .swiper-pagination{
-        top: 36vh;
+        top: 270px;
       }
     }
 

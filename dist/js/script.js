@@ -3,7 +3,7 @@ let deviceWidth = window.innerWidth;
 
 let swiperGames = new Swiper('.our-games__container', {
   slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
-  spaceBetween: 20,
+  spaceBetween: (deviceWidth > 1250) ? 70 : (deviceWidth > 2330) ? 100 : 20,
   loop: true,
   autoplay: {
     delay: 2500,
@@ -33,7 +33,7 @@ window.addEventListener("resize", function() {
 
   swiperGames = new Swiper('.our-games__container', {
     slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
-    spaceBetween: 20,
+    spaceBetween: (deviceWidth > 1250) ? 70 : (deviceWidth > 2330) ? 100 : 20,
     loop: true,
     autoplay: {
       delay: 2500,
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("scroll", function() {
   var pageVideos = [].slice.call(document.querySelectorAll("video"));
-  console.log(deviceWidth);
+
   if ("IntersectionObserver" in window && (deviceWidth > 560)) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
@@ -104,10 +104,3 @@ document.addEventListener("scroll", function() {
     });
   }
 });
-//turn off video for mobile
-
-
-// SMOOTH ANCHOR TRANSITION?
-// document.querySelector('.about-us').scrollIntoView({
-//   behavior: 'smooth'
-// });
