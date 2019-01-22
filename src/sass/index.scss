@@ -305,13 +305,13 @@ body{
 .partners {
   height: 60vh;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   background: #fff;
   &__h3 {
     text-transform: uppercase;
     font-size: 2.5vw;
-    margin-top: 0;
+    margin: 0;
+    padding-top: 3rem;
     color: #000;
   }
   &__container {

@@ -505,7 +505,7 @@ $liveGames-night: #010C23;
     padding-left: 1rem;
     &__h3 {
       font-size: 1.3rem;
-      padding-top: 1rem;
+      padding-top: 2rem;
     }
     &__container {
       &-block {
@@ -519,28 +519,38 @@ $liveGames-night: #010C23;
     height: 50vh;
     &-h3 {
       font-size: 1.3rem;
+      padding-top: 2rem;
     }
     &__content {
+      padding-top: 1rem;
       &-block {
         width: 100%;
         p {
           font-size: 4vw;
+          width: 80%;
+          margin: 0 auto;
         }
         button {
-          margin-top: 3.5rem;
           font-size: 3vw;
+          width:80%;
+          margin: 0 auto;
+          margin-top: 2rem;
+          padding: 15px 3rem;
         }
       }
       &-block:nth-child(1) {
         display: none;
       }
       &-block:nth-child(2) {
-        padding-top: 0rem;
+        padding-top: 1rem;
       }
     }
   }
   .footer {
     height: 50vh;
+    &__copyrigth {
+      font-size: .9rem;
+    }
     &__logo {
       width: 45%;
     }
