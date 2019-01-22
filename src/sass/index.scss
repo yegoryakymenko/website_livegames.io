@@ -319,6 +319,7 @@ body{
     flex-wrap: wrap;
     height: 80%;
     max-width: 100%;
+    padding-top: 1.5rem;
     &-block {
       display:flex;
       align-items: center;
@@ -335,7 +336,7 @@ body{
 }
 
 .career {
-  height: 100vh;
+  height: 80.2vh;
   width: 100%;
   background: #134086;
   color: #fff;
@@ -363,13 +364,17 @@ body{
       }
       p {
         font-family: 'Heebo', sans-serif;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         vertical-align: middle;
+        padding: 0 5rem 0 1rem;
+        width: 70%;
+        line-height: 2rem;
       }
       button {
         display: block;
         margin: 0 auto;
         margin-top: 5rem;
+        margin-left: 1rem;
         padding: 15px 5rem;
         background: #68A621;
         color: #fff;
@@ -384,6 +389,25 @@ body{
     }
   }
 }
+
+// &__content {
+//   padding-top: 3rem;
+//   font-size: 3vw;
+//   &-block {
+//     p {
+//       font-size: 2.5vw;
+//       padding: 0 5rem 0 1rem;
+//       margin-top: 0;
+//     }
+//     button {
+//       margin-top: 2.3rem;
+//       margin-left: 1rem;
+//     }
+//   }
+//   &-block:nth-child(2) {
+//     padding: 0rem 2rem 0 2rem;
+//   }
+// }
 
 .footer {
   display: flex;

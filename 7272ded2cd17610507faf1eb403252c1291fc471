@@ -1,0 +1,305 @@
+[33mcommit 7272ded2cd17610507faf1eb403252c1291fc471[m[33m ([m[1;36mHEAD -> [m[1;32mMobile-fixes[m[33m, [m[1;31morigin/Mobile-fixes[m[33m)[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Tue Jan 22 11:40:19 2019 +0200
+
+    Fixing mobile and tablet version
+
+[33mcommit 2dd057c442663998da95d72a6e9dcf7157383ee2[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 21 18:38:33 2019 +0200
+
+    Fixing mobile footer and tablet footer
+
+[33mcommit ffda9e9f380109dd990b45ed1060dc5e4bd89d71[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 17:51:56 2019 +0200
+
+    fixed problematic merge
+
+[33mcommit f9bec62e60d027896ed2759f8f1692ffb487bf57[m
+Merge: 5fd3621 da79968
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 17:20:03 2019 +0200
+
+    merging
+
+[33mcommit 5fd3621d298f80e3fd7c5abaa70a0e1bcc11a741[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 17:19:06 2019 +0200
+
+    merging
+
+[33mcommit b7a3b2a75bb1aaf738f03a08d55afcebf0444fbd[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 17:15:50 2019 +0200
+
+    fixed some styles
+
+[33mcommit 44660876349ac02ac0818262de0824061c5838f2[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 17:14:32 2019 +0200
+
+    fixed some styles
+
+[33mcommit 7dac7d0cd98f7b354e0ac740ba3df7e734c8264a[m[33m ([m[1;31morigin/mobile-blocks[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 16:55:28 2019 +0200
+
+    don't show videos for mobile
+
+[33mcommit 4d7c388fa3fd8ff6e0bfc00e378d4e2bee3c2e18[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 16:31:00 2019 +0200
+
+    added next 2 mobile blocks
+
+[33mcommit 791d47eb9de88cc14d01d5a15755a584b98bedab[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 16:08:51 2019 +0200
+
+    added first 2 mobile blocks
+
+[33mcommit da799680dedc38d426f1fbd8e69052ed04efef11[m[33m ([m[1;31morigin/footer-mobile[m[33m)[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 21 14:49:05 2019 +0200
+
+    Adding mobile.scss with styles for footer,career, and parntenrs
+
+[33mcommit 3644b874f7f840315a3e73bb1cb546879542b95d[m[33m ([m[1;31morigin/add-changes-to-desktop-f[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 14:43:20 2019 +0200
+
+    removed black column and console errors source
+
+[33mcommit 8935e72937cab6d21f142bac174bd9dcbd94ef0e[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 14:22:32 2019 +0200
+
+    mobile for partners
+
+[33mcommit cc7aa09744317539b56fec4f6fc0d88fc408018a[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 13:01:54 2019 +0200
+
+    added matching videos in tombala block
+
+[33mcommit e5a438914fc9b8f84cba56160362dc70876d3954[m
+Merge: 22b5cdb 5af89a9
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 21 12:35:00 2019 +0200
+
+    merge
+
+[33mcommit 22b5cdb27674344b82f5e68c0891d8c42e1f40f6[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 21 12:32:40 2019 +0200
+
+    merge
+
+[33mcommit 5af89a9e23c9f45ee06f27754f02ec4da88760d2[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 21 12:30:27 2019 +0200
+
+    changed slider nav
+
+[33mcommit fe24702839c6d611b1305cf8b0891d499d0d15b2[m[33m ([m[1;32mMobile-version[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 17:19:40 2019 +0200
+
+    updated scroll
+
+[33mcommit d795bda4460ab5cebf5089e21499012cce6f2080[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 17:04:18 2019 +0200
+
+    little fixes
+
+[33mcommit 0b169ffba9e4967cec24a598a694c7c71e0335ed[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 16:13:06 2019 +0200
+
+    better partner-benefits block
+
+[33mcommit ebb67c173ea5e31543d2d8b23ab6639601c1bbff[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 15:27:21 2019 +0200
+
+    merged
+
+[33mcommit ca380721b1539780d26ffbcf2f2d3130c61e533b[m
+Merge: 374ced5 80d206a
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 15:22:39 2019 +0200
+
+    merged
+
+[33mcommit 374ced50a14be2f37359cfb5be96af9ef9e95991[m
+Merge: d342799 8ba8730
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 15:17:13 2019 +0200
+
+    Merge branch 'master' of https://bitbucket.org/makifieva/website_livegames.io
+
+[33mcommit d34279909af169810d384c15974e0a7cfbfcd363[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 14:59:27 2019 +0200
+
+    checkout
+
+[33mcommit 9a1045000327c778bf101f08a6011c88052537c2[m[33m ([m[1;31morigin/finishing_m[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 14:23:16 2019 +0200
+
+    video optimized
+
+[33mcommit 80d206a638f39c02e96d2eda4f7a5f7159f6343f[m[33m ([m[1;31morigin/Script_and_mobile[m[33m)[m
+Author: yegoryakymenko <intheskyp@gmail.com>
+Date:   Fri Jan 18 13:56:02 2019 +0200
+
+    Adding img minify script and trying to do something with mobiel version
+
+[33mcommit 3e726afcac86804dc389a56d273ce3d67913ecdf[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 13:40:02 2019 +0200
+
+    part of vidio opt(saving)
+
+[33mcommit 8ba8730a0dd578642d9d1215ea0f3e70f4814cc0[m
+Author: Yegor Yakimenko <intheskyp@gmail.com>
+Date:   Fri Jan 18 13:06:31 2019 +0200
+
+    Adding image min script
+
+[33mcommit c6f34d6e3446760d6cd17e9f084aa6213cd68178[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 12:06:46 2019 +0200
+
+    fonts and texts changed
+
+[33mcommit f76b6b885ff44cdaa52fbc93333e849adc75368d[m
+Author: maria <makifieva@livegames.io>
+Date:   Fri Jan 18 11:39:55 2019 +0200
+
+    removed some packages and js code
+
+[33mcommit 4e5e3c5d11031ed9040a69d6384e03c81db562f5[m
+Author: Mita <mitafrumoasa@gmail.com>
+Date:   Thu Jan 17 18:31:05 2019 +0200
+
+    a little fix
+
+[33mcommit 0d2105087a2c1843f488412ff89e29333a67ce9f[m
+Author: Mita <mitafrumoasa@gmail.com>
+Date:   Thu Jan 17 17:41:14 2019 +0200
+
+    added unfinished partner-benefits
+
+[33mcommit c6eed5ce6681c64b23aff4cf6216c79fd7dcb518[m[33m ([m[1;31morigin/add-good-slider[m[33m)[m
+Author: Mita <mitafrumoasa@gmail.com>
+Date:   Thu Jan 17 14:32:57 2019 +0200
+
+    tombala done but all is need fixes
+
+[33mcommit 071dc0bf5b883695537de32a09819bb040efd255[m
+Author: Mita <mitafrumoasa@gmail.com>
+Date:   Thu Jan 17 12:27:07 2019 +0200
+
+    a normal slider for our-games done
+
+[33mcommit 3683392217d46096127047f538a727bf51d21ac5[m
+Author: maria <makifieva@livegames.io>
+Date:   Tue Jan 15 18:28:13 2019 +0200
+
+    merged
+
+[33mcommit 2a3a62cb97f966950ff76720d908ecf42819633f[m
+Merge: b062697 d8c8b1b
+Author: maria <makifieva@livegames.io>
+Date:   Tue Jan 15 18:27:06 2019 +0200
+
+    merging
+
+[33mcommit b0626971b670baa218756c2a45afe4a51e352a6a[m
+Author: maria <makifieva@livegames.io>
+Date:   Tue Jan 15 16:18:44 2019 +0200
+
+    added slider to our-games
+
+[33mcommit d8c8b1bb6f874f47ef10917dadbe1c99d7f29b60[m[33m ([m[1;31morigin/Footer[m[33m, [m[1;32mFooter[m[33m)[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Tue Jan 15 15:20:03 2019 +0200
+
+    Adding parnters block with logos
+
+[33mcommit 2a406a1a0bdcca41405d51455bdebe2cad6f7f9b[m
+Author: maria <makifieva@livegames.io>
+Date:   Tue Jan 15 11:24:40 2019 +0200
+
+    added over-under block
+
+[33mcommit 144dd3cc1bba7a7a21da58130e86511ef1ba663f[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 14 18:25:34 2019 +0200
+
+    Adding the footer block and career block
+
+[33mcommit c9ef4a9fa426be62f882fa6fefa5c64c5ef85a2b[m[33m ([m[1;31morigin/marys-part[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 17:46:33 2019 +0200
+
+    added our games
+
+[33mcommit 1460db914b9d8abb89797811116f36b4f73abdab[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 17:19:06 2019 +0200
+
+    added home
+
+[33mcommit 739d4705cc2d12d0e64fee7e0cf929d7ae62320c[m
+Merge: 01dd065 6cbfa6c
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 16:25:19 2019 +0200
+
+    merging
+
+[33mcommit 6cbfa6c03ee073e53d2f6e3dd80f8cc4d654b6e3[m[33m ([m[1;31morigin/marys-part-of-markup[m[33m)[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 16:23:07 2019 +0200
+
+    have gulp
+
+[33mcommit 01dd065ec8f0338948837a07907c0cd6281ca14b[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 14 15:31:51 2019 +0200
+
+    delete
+
+[33mcommit 9188c4f520baa6aa962eb8db8933d24cc14a6957[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 14 15:27:08 2019 +0200
+
+    Adding gulp and building the structure of project
+
+[33mcommit adf184856ea256beb5387687c609d431000c5893[m
+Author: Yegor Yakymenko <yakymenko@livegames.io>
+Date:   Mon Jan 14 15:26:05 2019 +0200
+
+    Adding gulp and building the structure
+
+[33mcommit 837129ebb4c071826a171c7fb6117591422a983c[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 13:12:08 2019 +0200
+
+    add some forgotten general things
+
+[33mcommit d58c29b79ba0ed279618ca48a8533a87e828b4e9[m
+Author: maria <makifieva@livegames.io>
+Date:   Mon Jan 14 12:23:11 2019 +0200
+
+    added general things
+
+[33mcommit 46c6833b1f0a5d4913b8a79b29d94e610e28ad93[m
+Author: Maria Akifieva <makifieva@livegames.io>
+Date:   Mon Jan 14 09:42:50 2019 +0000
+
+    Initial commit
