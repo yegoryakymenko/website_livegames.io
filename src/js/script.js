@@ -2,7 +2,7 @@
 let deviceWidth = window.innerWidth;
 
 let swiperGames = new Swiper('.our-games__container', {
-  slidesPerView: (deviceWidth > 560) ? 3 : 1,
+  slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
   spaceBetween: 70,
   loop: true,
   autoplay: {
@@ -32,7 +32,7 @@ window.addEventListener("resize", function() {
   deviceWidth = window.innerWidth;
 
   swiperGames = new Swiper('.our-games__container', {
-    slidesPerView: (deviceWidth > 560) ? 3 : 1,
+    slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
     spaceBetween: 70,
     loop: true,
     autoplay: {
