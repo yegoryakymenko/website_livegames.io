@@ -5,7 +5,12 @@ $liveGames-blue: #134086;
 $liveGames-darkBlue: #072D66;
 $liveGames-night: #010C23;
 
-//SMALL DESKTOPS
+@media only screen and (min-width: 1600px) {
+  .career {
+    height: 100vh;
+  }
+}
+
 @media only screen and (min-width: 770px) and (max-width: 1200px) {
   body{
     width: 100vw;
