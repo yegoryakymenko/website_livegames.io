@@ -11,7 +11,7 @@ window.addEventListener("orientationchange", function () {
     partners.classList.add('mobile-landscape');
     careerParag.className = 'paragraph';
     careerContent.className = 'career__content mobile-landscape__content';
-    careerButton.className = 'mobile-landscape__content .button';
+    careerButton.className = 'mobile-landscape__content button';
   } else {
     footer.classList.remove('mobile-landscape');
     career.classList.remove('mobile-landscape');
