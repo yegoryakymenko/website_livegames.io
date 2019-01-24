@@ -2,13 +2,13 @@
 let deviceWidth = window.innerWidth;
 
 let swiperGames = new Swiper('.our-games__container', {
-  slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
-  spaceBetween: (deviceWidth > 1250) ? 70 : (deviceWidth > 2330) ? 100 : 20,
+  slidesPerView: (deviceWidth > 725) ? 3 : 1,
+  centeredSlides: true,
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: true,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: true,
+  // },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -28,25 +28,24 @@ let swiperTombala = new Swiper('.tombala__container', {
   },
 });
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", changeScreenParameters());
+window.addEventListener("orientationchange",changeScreenParameters());
+
+function changeScreenParameters() {
   deviceWidth = window.innerWidth;
 
   swiperGames = new Swiper('.our-games__container', {
-    slidesPerView: (deviceWidth > 769) ? 3 : (deviceWidth <= 769 && deviceWidth > 480) ? 2 : 1,
-    spaceBetween: (deviceWidth > 1250) ? 70 : (deviceWidth > 2330) ? 100 : 20,
+    slidesPerView: (deviceWidth > 725) ? 3 : 1,
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-    },
+    centeredSlides: true,
+    // autoplay: {
+    //   delay: (deviceWidth < 540) ? 5500 : 2500,
+    //   disableOnInteraction: true,
+    // },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    }
   });
 
   if(deviceWidth <= 560){
@@ -55,7 +54,7 @@ window.addEventListener("resize", function() {
       video.pause();
     });
   }
-});
+}
 //OPTIMIZE VIDEO
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
@@ -92,9 +91,7 @@ document.addEventListener("scroll", function() {
         if (video.isIntersecting && (deviceWidth > 560)) {
           video.readyState === 4 && video.target.play();
         }else{
-          // if(video.target !== undefined){
             video.target.pause()
-          // }
         }
       });
     });
