@@ -1,0 +1,465 @@
+$games: 4;
+$overUnder-learnMore-bg: #CBB03F;
+$overUnder-playNow-bg: #68A621;
+$liveGames-blue: #134086;
+$liveGames-night: #010C23;
+
+body{
+  width: 100vw;
+  margin: 0;
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+.paragraph{
+  font-family: "Open Sans";
+  font-size: 1rem;
+}
+.main-block-header{
+  margin: 0;
+  line-height: 10vh;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home{
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background: $liveGames-night;
+  &__video{
+    margin: auto;
+    display: block;
+    height: 100vh;
+  }
+  &__overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    padding-left: 4%;
+    height: 100%;
+    width: 100%;
+    &-nav{
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      &_logo{
+        display: inline-block;
+        height: 75px;
+        width: 66px;
+        background: url("../img/logo.svg")
+      }
+      &-menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 7%;
+        padding: 0;
+        width: 26%;
+        &_li{
+          display: inline-block;
+          a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &-text{
+      margin-bottom: 10vh;
+      &_p{
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.about-us{
+  position: relative;
+  height: 400px;
+  background: $liveGames-blue url("../img/about_bg.svg") 80% bottom no-repeat;
+  background-size: 250px 300px;
+  text-align: center;
+  &__text{
+    display: inline-block;
+    margin-top: 2%;
+    width: 60%;
+    &_p{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.our-games{
+  min-height: 1%;
+  overflow-y: auto;
+  position: relative;
+  &__header{
+    background: #000;
+    padding: 0;
+  }
+  &__info{
+    padding: 0;
+    background: url("../img/games_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    .our-games__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: bottom;
+        background: none;
+        padding: 50px 0;
+        .swiper-slide{
+          height: 250px;
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+          background-size: 100% 100%;
+          z-index: 1;
+          img{
+            height: 250px;
+          }
+          .game_text{
+            position: absolute;
+            top: 40px; left: 70px;
+            display: inline-block;
+            text-align: right;
+            width: 50px;
+            .game_header{
+              color: gold;
+              margin: 0;
+            }
+            .game_p{
+              margin: 0;
+              color: #4ad6db;
+              font-weight: bold;
+            }
+          }
+        }
+        .swiper-slide-active{
+          transition: transform 2s;
+          img{
+            transition: box-shadow 2s;
+          }
+        }
+        .swiper-slide-active:hover{
+          transform: scale(1.1);
+          z-index: 10;
+          img{
+              box-shadow: 0 0 50px $liveGames-blue;
+          }
+        }
+      }
+    }
+  }
+
+.over-under{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  &__video{
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  &__overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background: rgba(11,33,61, 0.5);
+    z-index: 10;
+    text-align: center;
+    &-text{
+      display: inline-block;
+      margin-top: 18%;
+      &_p{
+        margin: 10px;
+      }
+      &-buttons{
+        margin: 20px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        &_learn,&_play{
+          line-height: 7vh;
+          width: 49%;
+          color: #fff;
+          font-family: "Open Sans";
+          font-weight: bold;
+          font-size: 1rem;
+          text-decoration: none;
+        }
+        &_learn{
+          background: $overUnder-learnMore-bg;
+        }
+        &_play{
+          background: $overUnder-playNow-bg;
+        }
+      }
+    }
+  }
+}
+
+.tombala{
+  height: 100vh;
+  background: url("../img/tombala_bg.jpg");
+  background-size: 100% 100%;
+  &__container{
+    height: 70vh;
+    width: 70%;
+    background: $liveGames-blue;
+    &-wrapper{
+      .tombala__slide{
+        height: 70vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .tombala__slide_video{
+          margin: 7vh 0;
+          width: 49%;
+          height: auto;
+        }
+        .tombala__slide-info{
+          margin: 7vh 0;
+          width: 47%;
+          font-size: 1rem;
+          &_header{
+            margin: 0;
+            font-size: 2rem;
+          }
+          .tombala__slide-info_play{
+            display: inline-block;
+            line-height: 7vh;
+            width: 40%;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            background: $overUnder-playNow-bg;
+          }
+        }
+      }
+    }
+  }
+  .swiper-pagination{
+    top: 63vh;
+  }
+  .swiper-pagination-bullet{
+    width: 15px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .swiper-pagination-bullet-active{
+    width: 35px;
+    opacity: 0.8;
+  }
+}
+
+.partners-benefits{
+  min-height: 1%;
+  overflow: hidden;
+  background: $liveGames-blue;
+  &__container{
+    margin: 0 auto;
+    padding-top: 3rem;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    .partners-benefits_benefit{
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 50px;
+      width: 50%;
+      &-img{
+        display: inline-block;
+        width: 22vh;
+        height: 20vh;
+      }
+      &-header{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      &-info{
+        margin: auto;
+        width: 60%;
+      }
+    }
+  }
+  #benefit_group-1{
+    @for $i from 1 through 3{
+      .partners-benefits_benefit:nth-child(#{$i}){
+        .partners-benefits_benefit-img{
+          background: url("../img/benefit-"+$i+".svg") no-repeat;
+          background-size: 90% 100%;
+        }
+        @if $i == 3{
+          .partners-benefits_benefit-img{
+            background-size: 100% 100%;
+          }
+        }
+      }
+    }
+  }
+  #benefit_group-2{
+    @for $i from 1 through 3{
+      .partners-benefits_benefit:nth-child(#{$i}){
+        .partners-benefits_benefit-img{
+          background: url("../img/benefit-"+($i+3)+".svg") no-repeat;
+          background-size: 90% 100%;
+        }
+      }
+    }
+  }
+}
+
+.partners {
+  height: 60vh;
+  text-align: center;
+  padding-bottom: 3rem;
+  background: #fff;
+  &__h3 {
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    margin: 0;
+    padding-top: 3rem;
+    color: #000;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+    max-width: 100%;
+    padding-top: 1.5rem;
+    &-block {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      width: 33.3%;
+      img {
+          max-width: 16vw;
+          height: auto;
+          width: auto;
+      }
+    }
+  }
+
+}
+
+.career {
+  height: 80.2vh;
+  width: 100%;
+  background: #134086;
+  color: #fff;
+  &-h3 {
+    font-size: 2.5vw;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 3rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  &__content {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    &-block {
+      width: 50%;
+      img {
+        max-width: 100%;
+        height: auto;
+        width: auto
+      }
+      p {
+        font-family: 'Heebo', sans-serif;
+        font-size: 1.3vw;
+        vertical-align: middle;
+        padding: 0 5rem 0 1rem;
+        width: 70%;
+        line-height: 2rem;
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        padding: 15px 5rem;
+        background: #68A621;
+        color: #fff;
+        font-size: 1.5vw;
+        text-transform: uppercase;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    &-block:nth-child(2) {
+      padding: 5rem 2rem 0 2rem;
+    }
+  }
+}
+
+// &__content {
+//   padding-top: 3rem;
+//   font-size: 3vw;
+//   &-block {
+//     p {
+//       font-size: 2.5vw;
+//       padding: 0 5rem 0 1rem;
+//       margin-top: 0;
+//     }
+//     button {
+//       margin-top: 2.3rem;
+//       margin-left: 1rem;
+//     }
+//   }
+//   &-block:nth-child(2) {
+//     padding: 0rem 2rem 0 2rem;
+//   }
+// }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+  background: #05142A;
+  &__logo {
+    width: 20%;
+  }
+  &__social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+    margin-top: 2rem;
+    .icon {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+  &__copyrigth {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    color: #fff;
+  }
+}
+
+@import "mobile.scss";
