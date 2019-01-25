@@ -1,14 +1,25 @@
+
+
+document.addEventListener('aos:in', ({ detail }) => {
+  console.log('animated in', detail);
+});
+
+document.addEventListener('aos:out', ({ detail }) => {
+  console.log('animated out', detail);
+});
+
 //ADD COROUSEL
+
 let deviceWidth = window.innerWidth;
 
 let swiperGames = new Swiper('.our-games__container', {
   slidesPerView: (deviceWidth > 725) ? 3 : 1,
   centeredSlides: true,
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -38,10 +49,10 @@ function changeScreenParameters() {
     slidesPerView: (deviceWidth > 725) ? 3 : 1,
     loop: true,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: (deviceWidth < 540) ? 5500 : 2500,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: (deviceWidth < 540) ? 5500 : 5000,
+      disableOnInteraction: true,
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -101,3 +112,23 @@ document.addEventListener("scroll", function() {
     });
   }
 });
+
+//STICK background
+let overUnder = document.querySelector('.over-under');
+let homeVideo = document.querySelector(".home__video");
+
+homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
+window.addEventListener("scroll", function() {
+  homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
+})
+
+
+//SMOOTH SCROLL
+document.querySelector(".home__overlay-nav-menu").addEventListener("click", function(event) {
+  if(event.target.nodeName === "A"){
+    event.preventDefault();
+    document.querySelector(event.target.getAttribute("href")).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+})

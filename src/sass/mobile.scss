@@ -1,9 +1,14 @@
 $games: 4;
-$overUnder-learnMore-bg: #CBB03F;
-$overUnder-playNow-bg: #68A621;
+$playNow-bg: #68A621;
 $liveGames-blue: #134086;
 $liveGames-darkBlue: #072D66;
-$liveGames-night: #010C23;
+$liveGames-night: #001D4B;
+
+$buttonFontSize-tablet: 1.2rem;
+$buttonLineHeight-tablet: 50px;
+
+$buttonFontSize-mobile: 1.2rem;
+$buttonLineHeight-mobile: 50px;
 
 //VERY BIG SCREEN
 @media only screen and (min-width: 2020px){
@@ -11,37 +16,57 @@ $liveGames-night: #010C23;
     &__info{
       padding: 5vh 0 3vh;
       .our-games__container {
+        padding-left: 0;
         height: 450px;
         .swiper-slide{
-          height: 430px;
+          height: 350px;
           img{
-            height: 430px;
+            height: 350px;
           }
         }
       }
     }
+    .swiper-slide-prev{
+      padding-left: 4%;
+    }
+    .swiper-slide-active{
+      z-index: 10;
+      transform: scale(1.1);
+      img{
+          box-shadow: 0 0 50px $liveGames-blue;
+      }
+    }
+  }
+  .tombala{
+    padding-top: 1%;
   }
 }
 //BIG SCREEN
-@media only screen and (min-width: 1600px) and (max-width: 1920px){
+@media only screen and (min-width: 1600px) and (max-width: 2020px){
   .our-games{
+    height: auto;
     &__info{
       padding: 5vh 0 3vh;
       .our-games__container {
-        height: 350px;
+        padding-left: 0;
+        height: 300px;
         .swiper-slide{
-          height: 300px;
+          height: 280px;
           img{
-            height: 300px;
+            height: 280px;
           }
         }
       }
+    }
+    .swiper-slide-prev{
+      padding-left: 4%;
     }
   }
   .career {
     height: 100vh;
   }
 }
+//over-under only
 @media only screen and (min-width: 1201px) and (max-width: 1920px){
   .over-under{
     &__overlay{
@@ -75,7 +100,6 @@ $liveGames-night: #010C23;
      text-transform: uppercase;
   }
   .home{
-    height: 85vh;
     &__overlay{
       &-nav{
         &-menu{
@@ -93,12 +117,8 @@ $liveGames-night: #010C23;
 
   .about-us{
     height: 300px;
-    background: $liveGames-blue url("../img/about_bg.svg") 80% bottom no-repeat;
-    background-size: 20% 70%;
     &__text{
-      display: inline-block;
-      margin-top: 10px;
-      width: 80%;
+      margin-top: 30px;
       &_header{
         line-height: 5vh;
       }
@@ -119,6 +139,7 @@ $liveGames-night: #010C23;
       padding: 1vh 0 0;
       background-image: none;
       .our-games__container {
+        padding-left: 0;
         height: 250px;
         .swiper-slide{
           height: 250px;
@@ -164,17 +185,53 @@ $liveGames-night: #010C23;
   }
 
   .tombala{
-    height: 650px;
+    height: auto;
+    overflow-y: visible;
+    background: url("../img/tombala_bg.jpg");
+    background-size: 100% 100%;
     &__container{
-      height:500px;
+      height: auto;
+      width: 70%;
+      padding-bottom: 50px;
       &-wrapper{
         .tombala__slide{
-          height:400px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .tombala__slide-info{
+            background: $liveGames-blue;
+            margin:0;
+            font-size: 1rem;
+            text-align: center;
+            .tombala__slide_video{
+              width: 100%;
+              height: auto;
+              height: auto;
+            }
+            .tombala__slide-info_play{
+              line-height: 2rem;
+              margin: 15px 0;
+              padding: 5px 0;
+              display: inline-block;
+              width: 30%;
+            }
+          }
         }
       }
     }
     .swiper-pagination{
-      top: 450px;
+      top: 95%;
+    }
+    .swiper-pagination-bullet{
+      width: 15px;
+      border-radius: 5px;
+      background: #fff;
+    }
+    .swiper-pagination-bullet-active{
+      width: 35px;
+      opacity: 0.8;
     }
   }
 
@@ -218,8 +275,9 @@ $liveGames-night: #010C23;
     }
 
     .home{
-      height: 65vh;
+      min-height: 400px;
       &__overlay{
+        height: 450px;
         margin: 0;
         &-nav{
           height: 50px;
@@ -242,15 +300,20 @@ $liveGames-night: #010C23;
 
     .about-us{
       height: 250px;
-      background: $liveGames-blue url("../img/about_bg.svg") 80% bottom no-repeat;
-      background-size: 20% 80%;
+      display: flex;
+      align-items: center;
+      background: $liveGames-darkBlue;
       &__text{
-        margin-top: 5%;
-        width: 70%;
+        margin: 0;
+        height: auto;
+        &_p{
+          width: 100%;
+        }
       }
     }
 
     .our-games{
+      height: auto;
       overflow-y: visible;
       position: relative;
       background: $liveGames-darkBlue;
@@ -262,9 +325,10 @@ $liveGames-night: #010C23;
         padding: 1vh 0 10vh;
         background-image: none;
         .our-games__container {
-          height: 120px;
+          padding: 0 0 30px;
+          height: auto;
           .swiper-slide{
-            height: 140px;
+            height: auto;
             img{
               height: 140px;
             }
@@ -284,11 +348,10 @@ $liveGames-night: #010C23;
 
     .over-under{
       background: $liveGames-night;
-      height: 400px;
       &__overlay{
         &-text{
-          margin-top: 150px;
-          width: 60%;
+          margin-top: 15vh;
+          width: 80%;
           &_header{
             font-size: 1rem;
             line-height: 1.5rem;
@@ -300,6 +363,8 @@ $liveGames-night: #010C23;
             line-height: 1.5rem;
           }
           &-buttons{
+            font-size: $buttonFontSize-tablet;
+            line-height: $buttonLineHeight-tablet;
             margin-top:10px;
             &_learn, &_play{
               margin-top: 1vh;
@@ -310,51 +375,51 @@ $liveGames-night: #010C23;
     }
 
     .tombala{
-      height: 700px;
-      .mobile_invisible-info{
-        display: none;
-      }
-      &__header{
-        line-height: 15vh;
-      }
+      height: auto;
+      overflow-y: visible;
+      background: url("../img/tombala_bg.jpg");
+      background-size: 100% 100%;
       &__container{
-        height: 500px;
-        width: 90%;
-        padding: 10px 0;
+        height: auto;
+        width: 70%;
+        padding: 0 0 50px;
         &-wrapper{
           .tombala__slide{
-            height: 500px;
+            height: auto;
+            display: flex;
             flex-direction: column;
             justify-content: center;
-            .tombala__slide_video{
-              margin-top: 50px;
-              margin-bottom: 0;
-              width: 60%;
-            }
+            align-items: center;
             .tombala__slide-info{
-              margin-top: 2rem;
-              width: 86%;
+              margin:0;
+              font-size: 1rem;
               text-align: center;
-              &_header{
-                margin: 0;
-                font-size: 1rem;
+              .tombala__slide_video{
+                width: 100%;
+                height: auto;
+                height: auto;
               }
-              &_p{
-                margin: 10px auto;
-                width: 91%;
-                font-size: 1rem;
-              }
-              &_play{
-                display: inline-block;
-                line-height: 3vh;
-                font-size: 0.8rem;
+              .tombala__slide-info_play{
+                margin: 15px 0;
+                width: 40%;
+                font-size: $buttonFontSize-tablet;
+                line-height: $buttonLineHeight-tablet;
               }
             }
           }
         }
-        .swiper-pagination{
-          top: 90%;
-        }
+      }
+      .swiper-pagination{
+        top: 93%;
+      }
+      .swiper-pagination-bullet{
+        width: 15px;
+        border-radius: 5px;
+        background: #fff;
+      }
+      .swiper-pagination-bullet-active{
+        width: 35px;
+        opacity: 0.8;
       }
     }
 
@@ -405,6 +470,8 @@ $liveGames-night: #010C23;
         }
         button {
           margin-top: 1rem;
+          width: 50%;
+          font-size: $buttonFontSize-tablet;
         }
       }
       &-block:nth-child(2) {
@@ -460,37 +527,45 @@ $liveGames-night: #010C23;
   }
 
   .home{
-    height: 250px;
-    background: url("../img/videos/home_bg.jpg") center no-repeat;
-    background-size: 100% 100%;
+    min-height: 220px;
+    background: url("../img/videos/home_bg.jpg") center bottom no-repeat;
+    background-size: contain;
     overflow: hidden;
+    justify-content: space-between;
     &__video{
       display: none;
     }
     &__overlay{
+      height: 100%;
+      text-align: center;
       &-nav{
+        height: auto;
+        background: $liveGames-night;
         margin-top: 0;
+        align-items: space-between;
         &_logo{
           height: 30px;
           width: 27px;
           background-size: 100% 100%;
         }
         &-menu{
-          width: 76%;
+          width: 80%;
           &_li{
             a{
-              font-size: 1rem;
+              font-size: 0.7rem;
             }
           }
         }
       }
       &-text{
-        margin-bottom: 2vh;
+        display: block;
+        margin: 0 0 20px;
         &_header{
-          font-size: 1rem;
+          display: none;
         }
         &_p{
-          line-height: 1vh;
+          font-size: 0.7rem;
+          margin: 0;
         }
       }
     }
@@ -498,12 +573,16 @@ $liveGames-night: #010C23;
 
   .about-us{
     height: 250px;
-    background: $liveGames-blue url("../img/about_bg.svg") 80% bottom no-repeat;
-    background-size: 20% 40%;
+    background: $liveGames-blue;
     &__text{
-      margin: 0;
-      width: 70%;
+      background: none;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0 0;
+      height: auto;
+      width: 100%;
       &_p{
+        width: 70%;
         font-size: 0.7rem;
       }
     }
@@ -515,7 +594,7 @@ $liveGames-night: #010C23;
     position: relative;
     &__header{
       background: none;
-      padding: 0;
+      padding-top: 20px;
     }
     &__info{
       margin: 0;
@@ -531,6 +610,7 @@ $liveGames-night: #010C23;
           margin: 0;
           padding: 0;
           .swiper-slide{
+            height: auto;
             padding: 0;
             display: inline-block;
             text-decoration: none;
@@ -583,48 +663,51 @@ $liveGames-night: #010C23;
   }
 
   .tombala{
-    height: 600px;
-    .mobile_invisible-info{
-      display: none;
-    }
-    &__header{
-    padding-bottom: 20px;
-    }
     &__container{
-      height:400px;
-      width: 90%;
-      padding: 10px 0;
+      height: auto;
+      width: 70%;
+      padding: 0 0 50px;
       &-wrapper{
         .tombala__slide{
-          height: 400px;
+          height: auto;
+          display: flex;
           flex-direction: column;
           justify-content: center;
-          .tombala__slide_video{
-            width: 90%;
-          }
+          align-items: center;
           .tombala__slide-info{
-            width: 90%;
+            margin:0;
+            font-size: 1rem;
             text-align: center;
-            &_header{
-              margin: 0;
-              font-size: 1rem;
+            .tombala__slide_video{
+              width: 100%;
+              height: auto;
+              height: auto;
             }
-            &_p{
-              margin: 10px auto;
-              width: 80%;
-              font-size: 0.8rem;
-            }
-            &_play{
+            .tombala__slide-info_play{
+              margin: 3vh 0;
               display: inline-block;
-              line-height: 3vh;
-              font-size: 0.8rem;
+              line-height: 7vh;
+              width: 70%;
+              text-align: center;
+              color: #fff;
+              text-decoration: none;
+              background: $playNow-bg;
             }
           }
         }
       }
     }
     .swiper-pagination{
-      top: 45%;
+      top: 91%;
+    }
+    .swiper-pagination-bullet{
+      width: 15px;
+      border-radius: 5px;
+      background: #fff;
+    }
+    .swiper-pagination-bullet-active{
+      width: 35px;
+      opacity: 0.8;
     }
   }
 
@@ -699,7 +782,7 @@ $liveGames-night: #010C23;
           line-height: 1.5rem;
         }
         button {
-          font-size: 3vw;
+          font-size: $buttonFontSize-mobile;
           width:80%;
           margin-left: 2rem;
           margin-top: 1rem;
@@ -794,7 +877,8 @@ $liveGames-night: #010C23;
     position: relative;
     padding-bottom: 12vh;
     &__header{
-      margin: 3vh 0 0;
+      margin: 0;
+      padding: 3vh 0 0;
       background: none;
     }
     &__info{
