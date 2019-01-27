@@ -520,14 +520,18 @@ $buttonLineHeight-mobile: 50px;
     font-family: "Open Sans";
     font-size: 0.8rem;
   }
+  .paragraph:nth-child(2) {
+    padding-top: 0;
+  }
   .main-block-header{
     padding-top: 20px;
+    padding-bottom: 2rem;
     font-size: 1.3rem;
     margin: 0;
   }
 
   .home{
-    min-height: 220px;
+    min-height: 230px;
     background: url("../img/videos/home_bg.jpg") center bottom no-repeat;
     background-size: contain;
     overflow: hidden;
@@ -549,7 +553,7 @@ $buttonLineHeight-mobile: 50px;
           background-size: 100% 100%;
         }
         &-menu{
-          width: 80%;
+          width: 60%;
           &_li{
             a{
               font-size: 0.7rem;
@@ -771,7 +775,7 @@ $buttonLineHeight-mobile: 50px;
       padding-top: 2.5rem;
     }
     &__content {
-      padding-top: 1rem;
+      padding-top: 0rem;
       &-block {
         width: 100%;
         p {
@@ -865,6 +869,13 @@ $buttonLineHeight-mobile: 50px;
         margin-top: 10px;
         width: 90%;
       }
+    }
+  }
+}
+@media only screen and (max-height: 823px) {
+  .career {
+    &-h3 {
+      margin-bottom: 10px;
     }
   }
 }
