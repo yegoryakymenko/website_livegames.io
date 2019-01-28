@@ -1,13 +1,3 @@
-
-
-document.addEventListener('aos:in', ({ detail }) => {
-  console.log('animated in', detail);
-});
-
-document.addEventListener('aos:out', ({ detail }) => {
-  console.log('animated out', detail);
-});
-
 //ADD COROUSEL
 
 let deviceWidth = window.innerWidth;
@@ -37,6 +27,16 @@ let swiperTombala = new Swiper('.tombala__container', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  on: {
+    slideChangeTransitionStart: function () {
+      $('.tombala__slide-header').hide(0);
+      $('.tombala__slide-header').removeClass('aos-init').removeClass('aos-animate');
+    },
+    slideChangeTransitionEnd: function () {
+      $('.tombala__slide-header').show(0);
+      AOS.init();
+    },
+  }
 });
 
 window.addEventListener("resize", changeScreenParameters());
@@ -73,16 +73,20 @@ document.addEventListener("DOMContentLoaded", function() {
   if ("IntersectionObserver" in window) {
     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(video) {
-        if (video.isIntersecting && video.target) {
+        if (video.intersectionRatio > 0 && video.target) {
           for (var source in video.target.children) {
             var videoSource = video.target.children[source];
             if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
               videoSource.src = videoSource.dataset.src;
             }
           }
-            video.target.load();
-            video.target.classList.remove("lazy");
-
+            if(video.target.readyState===4){
+              video.target.play()
+            }else{
+              video.target.load()
+            }
+        }else{
+          video.target.pause();
         }
       });
     });
@@ -90,26 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
     lazyVideos.forEach(function(lazyVideo) {
       lazyVideoObserver.observe(lazyVideo);
     });
-  }
-});
 
-document.addEventListener("scroll", function() {
-  var pageVideos = [].slice.call(document.querySelectorAll("video"));
-
-  if ("IntersectionObserver" in window && (deviceWidth > 560)) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
-        if (video.isIntersecting && (deviceWidth > 560)) {
-          video.readyState === 4 && video.target.play();
-        }else{
-            video.target.pause()
-        }
-      });
-    });
-
-    pageVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
+    lazyVideos.forEach((node)=>{
+      node.load();
+    })
   }
 });
 
@@ -121,7 +109,6 @@ homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" 
 window.addEventListener("scroll", function() {
   homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
 })
-
 
 //SMOOTH SCROLL
 document.querySelector(".home__overlay-nav-menu").addEventListener("click", function(event) {
