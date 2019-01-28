@@ -139,9 +139,6 @@ $buttonLineHeight-mobile: 50px;
     background: $liveGames-darkBlue;
     &__text{
       padding-top: 30px;
-      &_header{
-
-      }
       &_p{
         font-size: 1rem;
       }
@@ -586,10 +583,9 @@ $buttonLineHeight-mobile: 50px;
         margin-top: 0;
         align-items: space-between;
         padding-bottom: 2px;
+        padding-left: 10%;
         &_logo{
-          height: 30px;
-          width: 27px;
-          background-size: 100% 100%;
+          display: none;
         }
         &-menu{
           width: 60%;
@@ -607,6 +603,10 @@ $buttonLineHeight-mobile: 50px;
           display: none;
         }
         &_p{
+          font-size: 0.7rem;
+          margin: 0;
+        }
+        &_p:nth-of-type(2) {
           font-size: 0.7rem;
           margin: 0;
         }
@@ -809,6 +809,7 @@ $buttonLineHeight-mobile: 50px;
 
   .career {
     height: 55vh;
+    padding-bottom: 10px;
     &-h3 {
       font-size: 1.3rem;
       padding-top: 2.5rem;

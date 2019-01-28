@@ -25,14 +25,15 @@
     </video>
     <div class="home__overlay">
       <nav class="home__overlay-nav">
-        <div class="home__overlay-nav_logo"></div>
+
         <ul class="home__overlay-nav-menu">
           <li class="home__overlay-nav-menu_li"><a href="#about-us">ABOUT US</a></li>
           <li class="home__overlay-nav-menu_li"><a href="#our-games">GAMES</a></li>
-          <li class="home__overlay-nav-menu_li"><a href="#footer">CONTACTS</a></li>
+          <li class="home__overlay-nav-menu_li footer-scroll"><a href="#footer">CONTACTS</a></li>
         </ul>
       </nav>
       <div class="home__overlay-text">
+        <div class="home__overlay-nav_logo" data-aos="fade-up" data-aos-duration="700"></div>
         <h1 class="home__overlay-text_header" data-aos="fade-up" data-aos-duration="700">LIVEGAMES</h1>
         <p class="home__overlay-text_p paragraph" data-aos="fade-up" data-aos-duration="900">24/7 Live Casino</p>
         <p class="home__overlay-text_p paragraph" data-aos="fade-up" data-aos-duration="1000">Exceptional gameplay</p>
@@ -78,7 +79,7 @@
     <video autoplay muted playsinline class="over-under__video lazy video" loop="loop" poster="img/videos/over_under.jpg">
       <source data-src="img/videos/over_under_bg.mp4" type='video/mp4' />
     </video>
-    <div class="over-under__overlay">
+    <div class="over-under__overlay" data-aos="fade-up" data-aos-delay="500">
       <div class="over-under__overlay-text" data-aos="fade-up" data-aos-delay="500">
         <h3 class="over-under__overlay-text_header main-block-header">OVER/UNDER</h3>
         <p class="over-under__overlay-text_p paragraph">First time in the world Over/Under
@@ -88,7 +89,8 @@
         <div class="over-under__overlay-text-buttons">
           <a class="over-under__overlay-text-buttons_learn" href="https://www.livegames.io/overunder/index.html" target="_blank">LEARN
             MORE</a>
-          <a class="over-under__overlay-text-buttons_play">PLAY NOW</a>
+          <a class="over-under__overlay-text-buttons_play" href="https://lobby.lgio.net/?sign=funmode" target="_blank">PLAY
+            NOW</a>
         </div>
       </div>
     </div>
@@ -231,7 +233,7 @@
     </div>
   </div>
 
-  <div class="footer" id="footer">
+  <div class="footer">
     <img src="img/logo-new.svg" alt="LiveGames" draggable="false" class="footer__logo">
     <div class="footer__social-icons">
       <a href="https://www.linkedin.com/company/livegames/" class="icon"><i class="fab fa-linkedin"></i></a>
@@ -251,5 +253,6 @@
   <script src="js/script.js"></script>
   <script>AOS.init();</script>
 </body>
+</div>
 
 </html>

@@ -65,13 +65,13 @@ body{
         display: inline-block;
         height: 75px;
         width: 66px;
-        background: url("../img/logo.svg")
+        background: url("../img/logo.svg");
+        vertical-align: middle;
       }
       &-menu{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: 7%;
         padding: 0;
         width: 26%;
         &_li{
@@ -111,7 +111,22 @@ body{
       margin-bottom: 10vh;
       margin-left: 4%;
       &_p{
-        font-size: 1.3rem;
+        font-size: 2rem;
+        margin: 0;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      &_p:nth-of-type(2) {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      &_header {
+        display: inline-block;
+        vertical-align: bottom;
+        margin: 0;
+        margin-left: 20px;
+        font-size: 4rem;
       }
     }
   }
@@ -123,7 +138,7 @@ body{
   background-size: 250px 300px;
   text-align: center;
   &__text{
-    background: $liveGames-darkBlue;
+    background: rgba(7,45,102,.80);
     padding-bottom: 70px;
     &_p{
       display: inline-block;
@@ -219,7 +234,7 @@ body{
     height: 100%;
     width: 100%;
     top: 0px; left: 0;
-    background: rgba(11,33,61, 0.6);
+    background: rgba(11,33,61, .6);
     z-index: 10;
     text-align: center;
     &-text{
@@ -468,7 +483,7 @@ body{
         }
       }
       p {
-        font-family: ‘Heebo’, sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 1.3vw;
         vertical-align: middle;
         padding: 0 5rem 0 1rem;
@@ -490,6 +505,7 @@ body{
         cursor: pointer;
         font-size: $buttonFontSize-screen;
         transition: .375s all ease-in-out;
+        font-family: "Josefin Sans";
         &:hover {
           background-color: lighten($playNow-bg, 7%);
           transition: .375s all ease-in-out;
