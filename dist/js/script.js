@@ -111,29 +111,11 @@ window.addEventListener("scroll", function () {
 })
 
 //SMOOTH SCROLL
-// document.querySelector(".home__overlay-nav-menu").addEventListener("click", function (event) {
-//   if (event.target.nodeName === "A") {
-//     event.preventDefault();
-//     if (document.querySelector(event.target.getAttribute("href") == null)) return;
-//     document.querySelector(event.target.getAttribute("href")).scrollIntoView({
-//       behavior: 'smooth'
-//     });
-//   }
-// })
-
-
 document.querySelector(".home__overlay-nav-menu").addEventListener("click", function (event) {
   if (event.target.nodeName === "A") {
     event.preventDefault();
-    if (document.querySelector(event.target.getAttribute("href")) == null) return;
     document.querySelector(event.target.getAttribute("href")).scrollIntoView({
       behavior: 'smooth'
     });
   }
-})
-document.querySelector(".footer-scroll").addEventListener("click", (e) => {
-  window.scrollTo({
-    top: 10000,
-    behavior: "smooth"
-  });
 })

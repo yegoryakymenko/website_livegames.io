@@ -79,6 +79,12 @@ $buttonLineHeight-mobile: 50px;
       padding-left: 4%;
     }
   }
+  .over-under {
+    min-height: 1100px;
+  }
+  .tombala {
+    min-height: 976px;
+  }
   .career {
     height: 100vh;
   }
@@ -149,6 +155,9 @@ $buttonLineHeight-mobile: 50px;
     overflow-y: visible;
     position: relative;
     background: $liveGames-darkBlue;
+    &__p {
+      font-size: 1rem;
+    }
     &__header{
       background: none;
     }
@@ -177,7 +186,7 @@ $buttonLineHeight-mobile: 50px;
   }
 
   .over-under{
-    height: 500px;
+    min-height: 565px;
     &__overlay{
       &-text{
         margin-top: 180px;
@@ -205,6 +214,7 @@ $buttonLineHeight-mobile: 50px;
     overflow-y: visible;
     background: url("../img/tombala_bg.jpg");
     background-size: 100% 100%;
+    min-height: 650px;
     &__container{
       height: auto;
       width: 70%;
@@ -268,7 +278,9 @@ $buttonLineHeight-mobile: 50px;
       padding-top: 3rem;
     }
   }
-
+  .footer {
+    height: 60vh;
+  }
   .mobile-landscape {
     height: 100vh;
     &__content {
@@ -345,9 +357,14 @@ $buttonLineHeight-mobile: 50px;
       overflow-y: visible;
       position: relative;
       background: $liveGames-darkBlue;
+      &__p {
+        font-size: .8rem;
+        padding-bottom: 2rem;
+      }
       &__header{
         background: none;
-        line-height: 10vh;
+        line-height: 5vh;
+        
       }
       &__info{
         padding: 1vh 0 10vh;
@@ -635,9 +652,14 @@ $buttonLineHeight-mobile: 50px;
     background: $liveGames-darkBlue;
     overflow-y: visible;
     position: relative;
+    &__p {
+      font-size: .7rem;
+      padding-bottom: 1rem;
+    }
     &__header{
       background: none;
       padding-top: 20px;
+      padding-bottom: .7rem;
     }
     &__info{
       margin: 0;
