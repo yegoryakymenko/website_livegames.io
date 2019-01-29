@@ -48,7 +48,7 @@ $buttonLineHeight-mobile: 50px;
       p {
         line-height: 2.7rem;
       }
-      button {   
+      button {
         padding: 30px 0;
         font-size: 2rem;
         }
@@ -364,7 +364,7 @@ $buttonLineHeight-mobile: 50px;
       &__header{
         background: none;
         line-height: 5vh;
-        
+
       }
       &__info{
         padding: 1vh 0 10vh;
@@ -505,6 +505,7 @@ $buttonLineHeight-mobile: 50px;
 
     .career {
       height: auto;
+      overflow-y: visible;
       padding-bottom: 2rem;
       &-h3 {
         margin-bottom: 0;
@@ -531,35 +532,37 @@ $buttonLineHeight-mobile: 50px;
         }
       }
     }
-  .footer {
-    height: 50vh;
-    &__logo {
-      width: 30%;
-    }
-    &__social-icons {
-      width: 25%;
-      .icon {
-        width: 20%;
-        height: 25%;
-        .social-icon {
-          max-width: 45px;
+
+    .footer {
+      min-height: 50vh;
+      overflow-y: visible;
+      &__logo {
+        width: 30%;
+      }
+      &__social-icons {
+        width: 25%;
+        .icon {
+          width: 20%;
+          height: 25%;
+          .social-icon {
+            max-width: 45px;
+          }
         }
       }
     }
-  }
-  .mobile-landscape {
-    height: 100vh;
-    &__content {
-      padding-top: 1.5rem;
-      .career__content-block:nth-child(2) {
-        padding-top: .5rem;
-      }
-      .paragraph {
-        line-height: 1.3rem;
+
+    .mobile-landscape {
+      height: 100vh;
+      &__content {
+        padding-top: 1.5rem;
+        .career__content-block:nth-child(2) {
+          padding-top: .5rem;
+        }
+        .paragraph {
+          line-height: 1.3rem;
+        }
       }
     }
-
-  }
 }
 //MOBILES
 @media only screen and (max-width: 480px) {
@@ -576,8 +579,7 @@ $buttonLineHeight-mobile: 50px;
     padding-top: 0;
   }
   .main-block-header{
-    padding-top: 20px;
-    padding-bottom: 2rem;
+    padding: 20px 0 2rem;
     font-size: 1.3rem;
     margin: 0;
   }
@@ -632,18 +634,24 @@ $buttonLineHeight-mobile: 50px;
   }
 
   .about-us{
-    height: 250px;
+    height: auto;
+    overflow-y: visible;
     background: $liveGames-blue;
     &__text{
       background: none;
       justify-content: center;
       align-items: center;
-      margin: 50px 0 0;
+      padding: 0 0 20px;
+      margin: 0;
       height: auto;
       width: 100%;
+      &_header{
+        padding-bottom: 1rem;
+      }
       &_p{
         width: 70%;
         font-size: 0.7rem;
+        margin: 0;
       }
     }
   }
@@ -830,7 +838,8 @@ $buttonLineHeight-mobile: 50px;
   }
 
   .career {
-    height: 55vh;
+    height: auto;
+    overflow-y: visible;
     padding-bottom: 10px;
     &-h3 {
       font-size: 1.3rem;
@@ -902,7 +911,8 @@ $buttonLineHeight-mobile: 50px;
     }
   }
   .career {
-    height: 65vh;
+    min-height: 65vh;
+    overflow-y: visible;
     padding-bottom:10px;
     &__content-block {
       p {

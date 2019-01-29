@@ -119,3 +119,11 @@ document.querySelector(".home__overlay-nav-menu").addEventListener("click", func
     });
   }
 })
+
+document.querySelector(".footer-scroll").addEventListener("click", (e) => {
+  event.preventDefault();
+  window.scrollBy({
+    top: -50,
+    behavior: "smooth"
+  });
+})
