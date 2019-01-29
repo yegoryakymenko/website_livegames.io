@@ -263,7 +263,7 @@ $buttonLineHeight-mobile: 50px;
 
   .career {
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     &__content-block {
       p {
         font-size: 1.5vw;
@@ -271,7 +271,7 @@ $buttonLineHeight-mobile: 50px;
       }
       button {
         width: 50%;
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
     }
     &__content-block:nth-child(2) {
@@ -279,10 +279,11 @@ $buttonLineHeight-mobile: 50px;
     }
   }
   .footer {
-    height: 60vh;
+    padding-top: 2rem;
+    min-height: 60vh;
   }
   .mobile-landscape {
-    height: 100vh;
+    height: auto;
     &__content {
       padding-top: 1.5rem;
       .career__content-block:nth-child(2) {
@@ -436,7 +437,7 @@ $buttonLineHeight-mobile: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: cent100vher;
             .tombala__slide-info{
               margin:0;
               font-size: 1rem;
@@ -552,7 +553,7 @@ $buttonLineHeight-mobile: 50px;
     }
 
     .mobile-landscape {
-      height: 100vh;
+      height: auto;
       &__content {
         padding-top: 1.5rem;
         .career__content-block:nth-child(2) {
