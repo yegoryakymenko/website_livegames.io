@@ -5,39 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Live Games</title>
   <link rel="icon" href="img/favicon-16x16.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon-16x16.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="js/swiper/dist/css/swiper.min.css">
-  <link rel="stylesheet" href="js/aos/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <script src="js/screen-oreination-onload.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <div class="home">
-    <video autoplay muted playsinline class="home__video lazy video" poster="" loop="loop">
+    <!-- Uploading video from youtube instead of local storage -->
+    <!-- <video autoplay muted playsinline class="home__video lazy" poster="" loop="loop" style="position: fixed;">
+      <source src="img/videos/over_under.mp4" type='video/mp4' />
       <source data-src="img/videos/over_under.mp4" type='video/mp4' />
-      <source data-src="img/videos/over_under.webm" type='video/webm' />
-    </video>
+    </video> -->
+
+    <iframe class="home__video lazy" height="100%" width="100%" src="https://www.youtube.com/embed/8WkIYSu25Z0?loop=1&controls=0&autoplay=1&playlist=8WkIYSu25Z0&mute=1"
+      frameborder="0" allowfullscreen>
+    </iframe>
+
     <div class="home__overlay">
       <nav class="home__overlay-nav">
 
         <ul class="home__overlay-nav-menu">
           <li class="home__overlay-nav-menu_li"><a href="#about-us">ABOUT US</a></li>
           <li class="home__overlay-nav-menu_li"><a href="#our-games">GAMES</a></li>
-          <li class="home__overlay-nav-menu_li footer-scroll"><a href="#footer">CONTACTS</a></li>
+          <li class="home__overlay-nav-menu_li"><a href="#footer">CONTACTS</a></li>
         </ul>
       </nav>
       <div class="home__overlay-text">
-        <div class="home__overlay-nav_logo" data-aos="fade-up" data-aos-duration="700"></div>
-        <h1 class="home__overlay-text_header" data-aos="fade-up" data-aos-duration="700">LIVEGAMES</h1>
-        <p class="home__overlay-text_p paragraph" data-aos="fade-up" data-aos-duration="900">24/7 Live Casino</p>
-        <p class="home__overlay-text_p paragraph" data-aos="fade-up" data-aos-duration="1000">Exceptional gameplay</p>
+        <div class="home__overlay-nav_logo" data-aos="fade-up" data-aos-duration="1000"></div>
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="home__overlay-text_header">LIVEGAMES</h1>
+        <p data-aos="fade-up" data-aos-duration="1100" class="home__overlay-text_p paragraph">24/7 Live Casino</p>
+        <p data-aos="fade-up" data-aos-duration="100" class="home__overlay-text_p paragraph">Exceptional gameplay</p>
       </div>
     </div>
   </div>
@@ -53,19 +60,30 @@
   </div>
 
   <div class="our-games" id="our-games">
-    <h3 class="our-games__header main-block-header" data-aos="fade-up">OUR GAMES</h3>
-    <p class="our-games__p">24/7 Live game with the charming dealers</p>
+    <h3 class="our-games__header main-block-header">OUR GAMES</h3>
     <div class="our-games__info">
       <div class="swiper-container our-games__container">
         <div class="swiper-wrapper our-games__container-wrapper">
           <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="swiper-slide" id="game-1">
-            <img src="img/game-1.png" />
+            <img src="img/game-1.jpg" />
+            <div class="game_text">
+              <h2 class="game_header">TOMBALA</h2>
+              <p class="game_p">CLASSIC</p>
+            </div>
           </a>
           <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="swiper-slide" id="game-2">
-            <img src="img/game-2.png" />
+            <img src="img/game-2.jpg" />
+            <div class="game_text">
+              <h2 class="game_header">TOMBALA</h2>
+              <p class="game_p">REWARD</p>
+            </div>
           </a>
           <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="swiper-slide" id="game-3">
-            <img src="img/game-3.png" />
+            <img src="img/game-3.jpg" />
+            <div class="game_text">
+              <h2 class="game_header">TOMBALA</h2>
+              <p class="game_p">COLOR</p>
+            </div>
           </a>
           <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="swiper-slide" id="game-4">
             <img src="img/game-4.jpg" />
@@ -78,11 +96,18 @@
   </div>
 
   <div class="over-under">
-    <video autoplay muted playsinline class="over-under__video lazy video" loop="loop" poster="img/videos/over_under.jpg">
+    <!-- Uploading video from youtube instead of local storage -->
+    <!-- <video autoplay muted playsinline class="over-under__video video lazy" loop="loop" poster="img/videos/over_under.jpg">
+      <source src="img/videos/over_under_bg.mp4" type='video/mp4' />
       <source data-src="img/videos/over_under_bg.mp4" type='video/mp4' />
-    </video>
-    <div class="over-under__overlay" data-aos="fade-up" data-aos-delay="500">
-      <div class="over-under__overlay-text" data-aos="fade-up" data-aos-delay="500">
+    </video> -->
+    <div class="over-under__video video lazy" style=" width: 100%; height: 100vh">
+      <iframe height="100%" width="100%" src="https://www.youtube.com/embed/luZaG6vzgwE?loop=1&playlist=luZaG6vzgwE&controls=0&autoplay=1&mute=1"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="over-under__overlay">
+      <div class="over-under__overlay-text">
         <h3 class="over-under__overlay-text_header main-block-header">OVER/UNDER</h3>
         <p class="over-under__overlay-text_p paragraph">First time in the world Over/Under
           game in Live casino format </p>
@@ -99,15 +124,20 @@
   </div>
 
   <div class="tombala">
-    <div class="tombala__container swiper-container" data-aos="fade-up">
+    <div class="tombala__container swiper-container">
       <div class="tombala__container-wrapper swiper-wrapper">
 
         <div class="tombala__slide swiper-slide">
           <h3 class="tombala__slide-header main-block-header">BET ON CARDS</h3>
           <div class="tombala__slide-info">
-            <video muted playsinline class="tombala__slide_video lazy video" controls="controls">
+            <!-- Uploading video from youtube instead of local storage -->
+            <!-- <video muted playsinline class="tombala__slide_video video lazy" controls="controls">
+              <source src="img/videos/tombala-classic.mp4" type='video/mp4' />
               <source data-src="img/videos/tombala-classic.mp4" type='video/mp4' />
-            </video>
+            </video> -->
+            <iframe class="tombala__slide_video video lazy" height="100%" width="100%" src="https://www.youtube.com/embed/lz0FGkQ3EnU?loop=1&playlist=lz0FGkQ3EnU"
+              frameborder="0" allowfullscreen>
+            </iframe>
             <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="tombala__slide-info_play">PLAY NOW</a>
           </div>
         </div>
@@ -115,10 +145,14 @@
         <div class="tombala__slide swiper-slide">
           <h3 class="tombala__slide-header main-block-header">BET ON COLORS</h3>
           <div class="tombala__slide-info">
-            <video muted playsinline class="tombala__slide_video lazy video" controls="controls">
+            <!-- Uploading video from youtube instead of local storage -->
+            <!-- <video muted playsinline class="tombala__slide_video video lazy" controls="controls">
+              <source src="img/videos/tombala-color.mp4" type='video/mp4' />
               <source data-src="img/videos/tombala-color.mp4" type='video/mp4' />
-              <source data-src="img/videos/over_under.webm" type='video/webm' />
-            </video>
+            </video> -->
+            <iframe class="tombala__slide_video video lazy" height="100%" width="100%" src="https://www.youtube.com/embed/NslPTvmKh8Q?loop=1&playlist=NslPTvmKh8Q"
+              frameborder="0" allowfullscreen>
+            </iframe>
             <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="tombala__slide-info_play">PLAY NOW</a>
           </div>
         </div>
@@ -126,9 +160,14 @@
         <div class="tombala__slide swiper-slide">
           <h3 class="tombala__slide-header main-block-header">BET ON REWARDS</h3>
           <div class="tombala__slide-info">
-            <video muted playsinline class="tombala__slide_video lazy video" controls="controls">
+            <!-- Uploading video from youtube instead of local storage -->
+            <!-- <video muted playsinline class="tombala__slide_video video lazy" controls="controls">
+              <source src="img/videos/tombala-reward.mp4" type='video/mp4' />
               <source data-src="img/videos/tombala-reward.mp4" type='video/mp4' />
-            </video>
+            </video> -->
+            <iframe class="tombala__slide_video video lazy" height="100%" width="100%" src="https://www.youtube.com/embed/AkiMsuZXEaI?loop=1&playlist=AkiMsuZXEaI"
+              frameborder="0" allowfullscreen>
+            </iframe>
             <a href="https://lobby.lgio.net/?sign=funmode" target="_blank" class="tombala__slide-info_play">PLAY NOW</a>
           </div>
         </div>
@@ -140,7 +179,7 @@
   </div>
 
   <div class="partners-benefits">
-    <h3 class="partners-benefits__header main-block-header" data-aos="fade-up">Benefits for partners</h3>
+    <h3 class="partners-benefits__header main-block-header">Benefits for partners</h3>
     <ul class="partners-benefits__container" id="benefit_group-1">
       <li class="partners-benefits_benefit">
         <div class="partners-benefits_benefit-img"></div>
@@ -190,38 +229,38 @@
   <div class="partners">
     <h3 class="partners__h3">our partners</h3>
     <div class="partners__container">
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="700">
+      <div data-aos="zoom-out-up" data-aos-duration="700" class="partners__container-block">
         <img src="img/partners/1xBet-Logo.png" draggable="false" alt="1xBet">
       </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="700">
+      <div data-aos="zoom-out-up" data-aos-duration="800" class="partners__container-block">
         <img src="img/partners/everyMatrix-logo.png" draggable="false" alt="EveryMatrix">
       </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="700">
+      <div data-aos="zoom-out-up" data-aos-duration="900" class="partners__container-block">
         <img src="img/partners/favbet-logo.png" draggable="false" alt="FavBet">
       </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="800">
-        <img src="img/partners/Logo_luckyland.png" draggable="false" alt="LuckyLand">
-      </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="800">
-        <img src="img/partners/betinvest-logo.png" draggable="false" alt="BetInvest">
-      </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="800">
-        <img src="img/partners/InPlayNet Logo.jpg" draggable="false" alt="InPlayNet">
-      </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="900">
+      <div data-aos="zoom-out-up" data-aos-duration="1000" class="partners__container-block">
         <img src="img/partners/betcons.png" draggable="false" alt="BetConstruct">
       </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="900">
+      <div data-aos="zoom-out-up" data-aos-duration="1100" class="partners__container-block">
+        <img src="img/partners/betinvest-logo.png" draggable="false" alt="BetInvest">
+      </div>
+      <div data-aos="zoom-out-up" data-aos-duration="1200" class="partners__container-block">
+        <img src="img/partners/InPlayNet Logo.jpg" draggable="false" alt="InPlayNet">
+      </div>
+      <div data-aos="zoom-out-up" data-aos-duration="1300" class="partners__container-block">
+        <img src="img/partners/Logo_luckyland.png" draggable="false" alt="LuckyLand">
+      </div>
+      <div data-aos="zoom-out-up" data-aos-duration="1400" class="partners__container-block">
         <img src="img/partners/logo-pronet.png" draggable="false" alt="ProNet">
       </div>
-      <div class="partners__container-block" data-aos="zoom-in-up" data-aos-delay="900">
+      <div data-aos="zoom-out-up" data-aos-duration="1500" class="partners__container-block">
         <img src="img/partners/Logo-Sportingtech.png" draggable="false" alt="Sportingtech">
       </div>
     </div>
   </div>
 
   <div class="career">
-    <h3 class="career-h3" data-aos="fade-up">career</h3>
+    <h3 class="career-h3">career</h3>
     <div class="career__content">
       <div class="career__content-block">
         <img src="img/office.png" alt="Career">
@@ -248,14 +287,16 @@
       &copy; 2019 All rigths reserved
     </p>
   </div>
-  <div id="footer"></div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/screen-orientation.js"></script>
-  <script src="js/aos/dist/aos.js"></script>
-  <script src="js/swiper/dist/js/swiper.min.js"></script>
-  <script src="js/jquery/dist/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/animations.js"></script>
   <script src="js/script.js"></script>
-  <script>AOS.init();</script>
+
+
 </body>
-</div>
 
 </html>

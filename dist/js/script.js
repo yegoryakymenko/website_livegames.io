@@ -8,7 +8,7 @@ let swiperGames = new Swiper('.our-games__container', {
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: true,
+    disableOnInteraction: true
   },
   pagination: {
     el: '.swiper-pagination',
@@ -50,8 +50,7 @@ function changeScreenParameters() {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: (deviceWidth < 540) ? 5500 : 5000,
-      disableOnInteraction: true,
+      delay: (deviceWidth < 540) ? 5500 : 5000
     },
     pagination: {
       el: '.swiper-pagination',
@@ -120,10 +119,10 @@ document.querySelector(".home__overlay-nav-menu").addEventListener("click", func
   }
 })
 
-document.querySelector(".footer-scroll").addEventListener("click", (e) => {
-  event.preventDefault();
-  window.scrollBy({
-    top: -50,
-    behavior: "smooth"
-  });
-})
+// document.querySelector(".footer-scroll").addEventListener("click", (e) => {
+//   event.preventDefault();
+//   window.scrollBy({
+//     top: -50,
+//     behavior: "smooth"
+//   });
+// })

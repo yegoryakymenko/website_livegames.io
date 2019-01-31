@@ -9,7 +9,7 @@ $buttonFontSize-screen: 1.2rem;
 $buttonLineHeight-screen: 7vh;
 
 body{
-  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   font-family: "Josefin Sans";
   font-size: 16px;
@@ -308,10 +308,9 @@ body{
           margin: 0;
           font-size: 1rem;
           text-align: center;
+          width: 100%;
           .tombala__slide_video{
             width: 100%;
-            height: auto;
-            height: auto;
             height: 564px;
           }
           .tombala__slide-info_play{
@@ -350,7 +349,7 @@ body{
 
 .partners-benefits{
   height: auto;
-  min-height: 657px;;
+  min-height: 657px;
   overflow: hidden;
   background: $liveGames-blue;
   &__header{
