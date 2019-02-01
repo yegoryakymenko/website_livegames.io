@@ -14,7 +14,7 @@ $buttonFontSize-mobile: 1.2rem;
 $buttonLineHeight-mobile: 50px;
 
 //VERY BIG SCREEN
-@media only screen and (min-width: 2020px){
+@media only screen and (min-width: 1921px){
   .our-games{
     &__info{
       padding: 5vh 0 3vh;
@@ -39,6 +39,10 @@ $buttonLineHeight-mobile: 50px;
           box-shadow: 0 0 50px $liveGames-blue;
       }
     }
+  }
+  .over-under {
+
+  min-height: 100vh;
   }
   .tombala{
     padding-top: 1%;
@@ -92,6 +96,7 @@ $buttonLineHeight-mobile: 50px;
 //over-under only
 @media only screen and (min-width: 1201px) and (max-width: 1920px){
   .over-under{
+  min-height: 100vh;
     &__overlay{
       &-text{
         margin-top: 400px;
@@ -99,6 +104,22 @@ $buttonLineHeight-mobile: 50px;
       }
     }
   }
+}
+@media only screen and (max-width: 1200px) {
+  .video-background {
+    display: none;
+  }
+  .home {
+    background: url("../img/videos/home_bg.jpg") center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .over-under {
+    background: url("../img/videos/ou_bg.jpg") center no-repeat;
+    background-size: auto 100%;
+  }
+  
 }
 //SMALL SCREEN
 @media only screen and (min-width: 770px) and (max-width: 1200px) {
@@ -401,7 +422,7 @@ $buttonLineHeight-mobile: 50px;
     }
 
     .over-under{
-      background: $liveGames-night;
+      height: 450px;
       &__video{
         margin: 0 auto;
       }

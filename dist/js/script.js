@@ -1,3 +1,4 @@
+
 //ADD COROUSEL
 
 let deviceWidth = window.innerWidth;
@@ -65,6 +66,9 @@ function changeScreenParameters() {
     });
   }
 }
+
+
+
 //OPTIMIZE VIDEO
 document.addEventListener("DOMContentLoaded", function () {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
