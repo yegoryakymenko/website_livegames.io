@@ -104,10 +104,10 @@ document.addEventListener("DOMContentLoaded", function () {
 let overUnder = document.querySelector('.over-under');
 let homeVideo = document.querySelector(".home__video");
 
-homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
-window.addEventListener("scroll", function () {
-  homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
-})
+// homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
+// window.addEventListener("scroll", function () {
+//   homeVideo.style.position = (overUnder.getBoundingClientRect().y >= 0) ? "fixed" : "static";
+// })
 
 //SMOOTH SCROLL
 document.querySelector(".home__overlay-nav-menu").addEventListener("click", function (event) {
